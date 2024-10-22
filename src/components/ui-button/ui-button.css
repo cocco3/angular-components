@@ -1,0 +1,56 @@
+:host {
+  align-items: center;
+  background-color: var(--button-background-color-default);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-primary);
+  display: inline-flex;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: var(--button-font-size);
+  gap: 4px;
+  line-height: 1.5;
+  margin: 0;
+  padding-block: 8px;
+  padding-inline: 16px;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+:host::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+@media (hover: hover) {
+  :host:enabled:hover,
+  :host:any-link:hover {
+    background-color: var(--button-background-color-hover);
+    cursor: pointer;
+  }
+}
+
+:host:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+:host.kind-primary {
+  --button-background-color-default: #73df81;
+  --button-background-color-hover: #83ea90;
+}
+
+:host.kind-secondary {
+  --button-background-color-default: #2de2e2;
+  --button-background-color-hover: #62d7d7;
+}
+
+:host.size-small {
+  --button-font-size: 12px;
+}
+
+:host.size-medium {
+  --button-font-size: 16px;
+}

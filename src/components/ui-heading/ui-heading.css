@@ -1,0 +1,19 @@
+:host {
+  color: var(--text-primary);
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+:host.size-small {
+  font-size: 20px;
+}
+
+:host.size-medium {
+  font-size: 28px;
+}
+
+:host.size-large {
+  font-size: 36px;
+}
