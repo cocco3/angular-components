@@ -29,3 +29,12 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: { kind: 'secondary', size: 'medium', content: 'Secondary' },
 };
+
+export const Disabled: Story = {
+  args: {
+    kind: 'primary',
+    size: 'medium',
+    disabled: true,
+    content: 'Disabled',
+  },
+};

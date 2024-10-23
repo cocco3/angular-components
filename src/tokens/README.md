@@ -1,1 +1,2 @@
-After modifying any files in this directory, run the `tokens:build` npm script.
+- After modifying any files in this directory, run the `tokens:build` npm script.
+- Always use theme variables over directly using the primitive colors
