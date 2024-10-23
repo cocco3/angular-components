@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Directive, HostBinding, Input } from '@angular/core';
+import {
+  booleanAttribute,
+  Component,
+  Directive,
+  HostBinding,
+  Input,
+} from '@angular/core';
 
 export const UiButtonKinds = ['primary', 'secondary'];
 export type UiButtonKind = (typeof UiButtonKinds)[number];
@@ -33,7 +39,7 @@ class UiButtonBase {
   },
 })
 export class UiButton extends UiButtonBase {
-  @Input() disabled?: boolean = false;
+  @Input({ transform: booleanAttribute }) disabled?: boolean = false;
 }
 
 @Component({
