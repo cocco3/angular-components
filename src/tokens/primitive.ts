@@ -1,10 +1,13 @@
 export const primitives = {
   neutral: {
     '00': '#ffffff',
-    '50': '#f9fafb',
+    '50': '#eaeaea',
+    '800': '#3b3b4f',
+    '900': '#001439',
   },
   blue: {
-    '100': '#f6f7fe',
+    '100': '#3636ec',
+    '900': '#002ead',
   },
   red: {
     '100': '#ffebeb',

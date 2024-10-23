@@ -4,13 +4,13 @@
  */
 
 :root, .theme-light {
-  --text-primary: #ffffff;
-  --text-secondary: #f9fafb;
-  --text-link: #f6f7fe;
+  --text-primary: #001439;
+  --text-secondary: #3b3b4f;
+  --text-link: #002ead;
 }
 
 .theme-dark {
   --text-primary: #ffffff;
-  --text-secondary: #f9fafb;
-  --text-link: #f6f7fe;
+  --text-secondary: #eaeaea;
+  --text-link: #3636ec;
 }

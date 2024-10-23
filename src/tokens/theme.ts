@@ -6,9 +6,9 @@ export type Theme = typeof defaultTheme;
 
 export const defaultTheme = {
   text: {
-    primary: neutral['00'],
-    secondary: neutral['50'],
-    link: blue['100'],
+    primary: neutral['900'],
+    secondary: neutral['800'],
+    link: blue['900'],
   },
 };
 
