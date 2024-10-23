@@ -4,7 +4,7 @@ export const UiHeadingSizes = ['small', 'medium', 'large'];
 export type UiHeadingSize = (typeof UiHeadingSizes)[number];
 
 /**
- * Use this component by adding the [ui-heading] attribute
+ * Use this component by adding the `[ui-heading]` attribute
  *  on any heading element (h1–h6).
  *
  * Using an attribute instead of a custom element allows direct access
