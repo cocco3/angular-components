@@ -1,0 +1,16 @@
+/*
+ * Auto-generated on Wed Oct 23 2024. Do not modify.
+ * Update variables in ./src/tokens then run "build:tokens" script.
+ */
+
+:root, .theme-light {
+  --text-primary: #ffffff;
+  --text-secondary: #f9fafb;
+  --text-link: #f6f7fe;
+}
+
+.theme-dark {
+  --text-primary: #ffffff;
+  --text-secondary: #f9fafb;
+  --text-link: #f6f7fe;
+}
