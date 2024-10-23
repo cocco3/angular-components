@@ -45,7 +45,7 @@ class UiButtonBase {
   },
 })
 export class UiButton extends UiButtonBase {
-  @Input({ transform: booleanAttribute }) disabled?: boolean = false;
+  @Input({ transform: booleanAttribute }) disabled? = false;
 }
 
 @Component({
