@@ -9,10 +9,7 @@ export type UiButtonSize = (typeof UiButtonSizes)[number];
 
 @Directive()
 class UiButtonBase {
-  /** Color of button */
   @Input({ required: true }) kind!: UiButtonKind;
-
-  /** Size of button */
   @Input({ required: true }) size!: UiButtonSize;
 
   @HostBinding('class')

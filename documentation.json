@@ -34,12 +34,12 @@
     "directives": [
         {
             "name": "UiButtonBase",
-            "id": "directive-UiButtonBase-62143179fee7ae3c28d298454a52d9330ab651e2ad171a1bf0f16767c95f541e9ef8a4bbbc36ae3b23b7e4682d4b753c422a92261c7054ea75b9ba441b60c3eb",
+            "id": "directive-UiButtonBase-21a36bae8cc5050095a8d34cfc6a5a35044e4a9617437208700f57db10b09e9a4e1efce42e1c15870e798b2a12e67eaa4df8fe28887820cddcbb63df6bf70f0d",
             "file": "src/components/ui-button/ui-button.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  /** Color of button */\n  @Input({ required: true }) kind!: UiButtonKind;\n\n  /** Size of button */\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
             "providers": [],
             "hostDirectives": [],
             "standalone": false,
@@ -50,9 +50,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "rawdescription": "\nColor of button",
-                    "description": "<p>Color of button</p>\n",
-                    "line": 13,
+                    "line": 12,
                     "type": "UiButtonKind",
                     "decorators": []
                 },
@@ -62,9 +60,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "rawdescription": "\nSize of button",
-                    "description": "<p>Size of button</p>\n",
-                    "line": 16,
+                    "line": 13,
                     "type": "UiButtonSize",
                     "decorators": []
                 }
@@ -77,7 +73,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 16,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": []
                 }
@@ -93,7 +89,7 @@
                         "name": "cssClass",
                         "type": "",
                         "returnType": "",
-                        "line": 19
+                        "line": 16
                     }
                 }
             }
@@ -479,7 +475,7 @@
         },
         {
             "name": "UiButton",
-            "id": "component-UiButton-62143179fee7ae3c28d298454a52d9330ab651e2ad171a1bf0f16767c95f541e9ef8a4bbbc36ae3b23b7e4682d4b753c422a92261c7054ea75b9ba441b60c3eb",
+            "id": "component-UiButton-21a36bae8cc5050095a8d34cfc6a5a35044e4a9617437208700f57db10b09e9a4e1efce42e1c15870e798b2a12e67eaa4df8fe28887820cddcbb63df6bf70f0d",
             "file": "src/components/ui-button/ui-button.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -504,9 +500,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "rawdescription": "\nColor of button",
-                    "description": "<p>Color of button</p>\n",
-                    "line": 13,
+                    "line": 12,
                     "type": "UiButtonKind",
                     "decorators": [],
                     "inheritance": {
@@ -519,9 +513,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "rawdescription": "\nSize of button",
-                    "description": "<p>Size of button</p>\n",
-                    "line": 16,
+                    "line": 13,
                     "type": "UiButtonSize",
                     "decorators": [],
                     "inheritance": {
@@ -539,7 +531,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 16,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": [],
                     "inheritance": {
@@ -558,7 +550,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  /** Color of button */\n  @Input({ required: true }) kind!: UiButtonKind;\n\n  /** Size of button */\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -574,7 +566,7 @@
         },
         {
             "name": "UiButtonAnchor",
-            "id": "component-UiButtonAnchor-62143179fee7ae3c28d298454a52d9330ab651e2ad171a1bf0f16767c95f541e9ef8a4bbbc36ae3b23b7e4682d4b753c422a92261c7054ea75b9ba441b60c3eb",
+            "id": "component-UiButtonAnchor-21a36bae8cc5050095a8d34cfc6a5a35044e4a9617437208700f57db10b09e9a4e1efce42e1c15870e798b2a12e67eaa4df8fe28887820cddcbb63df6bf70f0d",
             "file": "src/components/ui-button/ui-button.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -599,9 +591,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "rawdescription": "\nColor of button",
-                    "description": "<p>Color of button</p>\n",
-                    "line": 13,
+                    "line": 12,
                     "type": "UiButtonKind",
                     "decorators": [],
                     "inheritance": {
@@ -614,9 +604,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "rawdescription": "\nSize of button",
-                    "description": "<p>Size of button</p>\n",
-                    "line": 16,
+                    "line": 13,
                     "type": "UiButtonSize",
                     "decorators": [],
                     "inheritance": {
@@ -634,7 +622,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 16,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": [],
                     "inheritance": {
@@ -653,7 +641,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  /** Color of button */\n  @Input({ required: true }) kind!: UiButtonKind;\n\n  /** Size of button */\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -919,7 +907,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 16,
+        "count": 7,
         "status": "low",
         "files": [
             {
@@ -946,27 +934,27 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "UiButton",
-                "coveragePercent": 50,
-                "coverageCount": "2/4",
-                "status": "medium"
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
             },
             {
                 "filePath": "src/components/ui-button/ui-button.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "UiButtonAnchor",
-                "coveragePercent": 50,
-                "coverageCount": "2/4",
-                "status": "medium"
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
             },
             {
                 "filePath": "src/components/ui-button/ui-button.ts",
                 "type": "directive",
                 "linktype": "directive",
                 "name": "UiButtonBase",
-                "coveragePercent": 50,
-                "coverageCount": "2/4",
-                "status": "medium"
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
             },
             {
                 "filePath": "src/components/ui-button/ui-button.ts",
