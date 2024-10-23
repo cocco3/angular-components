@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { UiButton, UiButtonKinds, UiButtonSizes } from './ui-button';
 
-type StoryType = UiButton & { content: string };
+type StoryType = UiButton & { content: string; onClick: () => void };
 
 const meta: Meta<StoryType> = {
   component: UiButton,
@@ -13,7 +13,15 @@ const meta: Meta<StoryType> = {
   render: (args) => {
     return {
       props: args,
-      template: `<button ui-button [size]="size" [kind]="kind">{{content}}</button>`,
+      template: `
+        <button
+          ui-button
+          [disabled]="disabled"
+          [size]="size"
+          [kind]="kind"
+        >
+          {{content}}
+        </button>`,
     };
   },
 };
@@ -25,6 +33,14 @@ export const Primary: Story = {
   args: {
     kind: 'primary',
     size: 'medium',
-    content: 'primary',
+    content: 'Primary',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    kind: 'secondary',
+    size: 'medium',
+    content: 'Secondary',
   },
 };

@@ -34,12 +34,12 @@
     "directives": [
         {
             "name": "UiButtonBase",
-            "id": "directive-UiButtonBase-21a36bae8cc5050095a8d34cfc6a5a35044e4a9617437208700f57db10b09e9a4e1efce42e1c15870e798b2a12e67eaa4df8fe28887820cddcbb63df6bf70f0d",
+            "id": "directive-UiButtonBase-cca406ce6ce3f09a2575df69f417a15ad787ef0aba41116a83d2fe5c7ad05ebbb3cd5e8063d55a551a8d5dc4bd9599f719261291df4cf294a9f4eb2ef4058020",
             "file": "src/components/ui-button/ui-button.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {\n  @Input() disabled?: boolean;\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
             "providers": [],
             "hostDirectives": [],
             "standalone": false,
@@ -475,7 +475,7 @@
         },
         {
             "name": "UiButton",
-            "id": "component-UiButton-21a36bae8cc5050095a8d34cfc6a5a35044e4a9617437208700f57db10b09e9a4e1efce42e1c15870e798b2a12e67eaa4df8fe28887820cddcbb63df6bf70f0d",
+            "id": "component-UiButton-cca406ce6ce3f09a2575df69f417a15ad787ef0aba41116a83d2fe5c7ad05ebbb3cd5e8063d55a551a8d5dc4bd9599f719261291df4cf294a9f4eb2ef4058020",
             "file": "src/components/ui-button/ui-button.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -494,6 +494,14 @@
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "boolean",
+                    "decorators": []
+                },
                 {
                     "required": true,
                     "name": "kind",
@@ -550,7 +558,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {\n  @Input() disabled?: boolean;\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -566,7 +574,7 @@
         },
         {
             "name": "UiButtonAnchor",
-            "id": "component-UiButtonAnchor-21a36bae8cc5050095a8d34cfc6a5a35044e4a9617437208700f57db10b09e9a4e1efce42e1c15870e798b2a12e67eaa4df8fe28887820cddcbb63df6bf70f0d",
+            "id": "component-UiButtonAnchor-cca406ce6ce3f09a2575df69f417a15ad787ef0aba41116a83d2fe5c7ad05ebbb3cd5e8063d55a551a8d5dc4bd9599f719261291df4cf294a9f4eb2ef4058020",
             "file": "src/components/ui-button/ui-button.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -641,7 +649,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Directive, HostBinding, Input } from '@angular/core';\n\nexport const UiButtonKinds = ['primary', 'secondary'];\nexport type UiButtonKind = (typeof UiButtonKinds)[number];\n\nexport const UiButtonSizes = ['small', 'medium'];\nexport type UiButtonSize = (typeof UiButtonSizes)[number];\n\n@Directive()\nclass UiButtonBase {\n  @Input({ required: true }) kind!: UiButtonKind;\n  @Input({ required: true }) size!: UiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'button[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButton',\n})\nexport class UiButton extends UiButtonBase {\n  @Input() disabled?: boolean;\n}\n\n@Component({\n  standalone: true,\n  imports: [CommonModule],\n  selector: 'a[ui-button]',\n  templateUrl: './ui-button.html',\n  styleUrls: ['./ui-button.css'],\n  exportAs: 'uiButtonAnchor',\n})\nexport class UiButtonAnchor extends UiButtonBase {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -935,7 +943,7 @@
                 "linktype": "component",
                 "name": "UiButton",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

@@ -20,9 +20,14 @@ const meta: Meta<StoryType> = {
 export default meta;
 type Story = StoryObj<StoryType>;
 
+export const Small: Story = {
+  args: { size: 'small', content: 'Heading' },
+};
+
+export const Medium: Story = {
+  args: { size: 'medium', content: 'Heading' },
+};
+
 export const Large: Story = {
-  args: {
-    size: 'large',
-    content: 'Heading',
-  },
+  args: { size: 'large', content: 'Heading' },
 };

@@ -28,8 +28,13 @@ class UiButtonBase {
   templateUrl: './ui-button.html',
   styleUrls: ['./ui-button.css'],
   exportAs: 'uiButton',
+  host: {
+    '[disabled]': 'disabled',
+  },
 })
-export class UiButton extends UiButtonBase {}
+export class UiButton extends UiButtonBase {
+  @Input() disabled?: boolean = false;
+}
 
 @Component({
   standalone: true,
