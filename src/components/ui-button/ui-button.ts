@@ -27,6 +27,12 @@ class UiButtonBase {
   }
 }
 
+/**
+ * Use this component by adding the [ui-button] attribute on any button element.
+ *
+ * Using an attribute instead of a custom element allows direct access
+ *  to the native underlying element.
+ */
 @Component({
   standalone: true,
   imports: [CommonModule],
