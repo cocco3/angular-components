@@ -10,11 +10,11 @@ const template = `
 `;
 
 const transformToVariables = (theme: Theme, selector: string) => {
-  let contents = '';
-
-  contents += Object.entries(theme.text)
+  const textProperties = Object.entries(theme.text)
     .map(([key, value]) => `  --text-${key}: ${value};`)
     .join('\n');
+
+  const contents = [textProperties].join('\n\n');
 
   const css = template
     .replace('{{SELECTOR}}', selector)
