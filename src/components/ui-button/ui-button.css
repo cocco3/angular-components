@@ -3,6 +3,7 @@
   background-color: var(--button-background-color-default);
   border: none;
   border-radius: 8px;
+  box-sizing: border-box;
   color: var(--text-primary);
   display: inline-flex;
   font-family: sans-serif;
