@@ -13,5 +13,12 @@ const config: StorybookConfig = {
     name: '@storybook/angular',
     options: {},
   },
+  managerHead: (head) => `
+  ${head}
+  <link
+    rel="shortcut icon"
+    href="https://www.quantified.ai/wp-content/uploads/2021/11/cropped-favicon_512x512-32x32.png"
+  />
+`,
 };
 export default config;
