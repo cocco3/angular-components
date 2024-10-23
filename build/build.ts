@@ -1,3 +1,3 @@
-import { themeToCss } from './themToCss';
+import { themeToCss } from './themeToCss';
 
 themeToCss();
