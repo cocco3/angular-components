@@ -1,5 +1,6 @@
-import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import { UiButton, UiButtonKinds, UiButtonSizes } from './ui-button';
+import { argsToAttributes } from '../../sb-utils';
 
 type UiButtonStory = UiButton & { content: string };
 
@@ -11,10 +12,10 @@ const meta: Meta<UiButtonStory> = {
     size: { options: UiButtonSizes, control: { type: 'radio' } },
   },
 
-  // for being able to use content projection
+  // custom render to allow content projection
   render: ({ content, ...args }) => ({
     props: args,
-    template: `<button ui-button ${argsToTemplate(args)}>${content}</button>`,
+    template: `<button ui-button ${argsToAttributes(args)}>${content}</button>`,
   }),
 };
 
