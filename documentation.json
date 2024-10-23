@@ -757,16 +757,6 @@
                 "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
             },
             {
-                "name": "argsToAttributes",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/sb-utils.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(args: Record<string, unknown>) =>\n  Object.entries(args)\n    .map(([key, val]) => `${key}=\"${val}\"`)\n    .join(' ')"
-            },
-            {
                 "name": "darkTheme",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -895,18 +885,6 @@
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
                     "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
-                }
-            ],
-            "src/sb-utils.ts": [
-                {
-                    "name": "argsToAttributes",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/sb-utils.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(args: Record<string, unknown>) =>\n  Object.entries(args)\n    .map(([key, val]) => `${key}=\"${val}\"`)\n    .join(' ')"
                 }
             ],
             "src/tokens/theme.ts": [
@@ -1196,16 +1174,6 @@
                 "name": "User",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/sb-utils.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "argsToAttributes",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
                 "status": "low"
             },
             {
