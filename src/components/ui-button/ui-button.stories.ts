@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { UiButton, UiButtonKinds, UiButtonSizes } from './ui-button';
-import { argsToAttributes } from '../../sb-utils';
+import { argsToAttributes } from '../../../.storybook/utilities';
 
 type UiButtonStory = UiButton & { content: string };
 

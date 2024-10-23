@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { UiHeading, UiHeadingSizes } from './ui-heading';
-import { argsToAttributes } from '../../sb-utils';
+import { argsToAttributes } from '../../../.storybook/utilities';
 
 type StoryType = UiHeading & { content: string };
 
