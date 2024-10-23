@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
 import { UiHeading, UiHeadingSizes } from './ui-heading';
 
 type StoryType = UiHeading & { content: string };
@@ -9,12 +9,11 @@ const meta: Meta<StoryType> = {
   argTypes: {
     size: { options: UiHeadingSizes, control: { type: 'radio' } },
   },
-  render: (args) => {
-    return {
-      props: args,
-      template: `<h1 ui-heading [size]="size">{{content}}</h1>`,
-    };
-  },
+  // for being able to use content projection
+  render: ({ content, ...args }) => ({
+    props: args,
+    template: `<h1 ui-heading ${argsToTemplate(args)}>${content}</h1>`,
+  }),
 };
 
 export default meta;
