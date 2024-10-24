@@ -1,5 +1,5 @@
 import { appendFileSync, writeFileSync } from 'fs';
-import { darkTheme, defaultTheme, type Theme } from '../src/tokens';
+import { darkTheme, defaultTheme, type Theme } from '../src/foundations';
 
 const OUT_FILE_PATH = './src/css/theme.css';
 

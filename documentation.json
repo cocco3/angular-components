@@ -420,7 +420,7 @@
                 "name": "darkTheme",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/tokens/theme.ts",
+                "file": "src/foundations/color/theme.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Theme",
@@ -430,7 +430,7 @@
                 "name": "defaultTheme",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/tokens/theme.ts",
+                "file": "src/foundations/color/theme.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
@@ -440,7 +440,7 @@
                 "name": "primitives",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/tokens/primitive.ts",
+                "file": "src/foundations/color/primitive.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
@@ -479,7 +479,7 @@
             {
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/tokens/theme.ts",
+                "file": "src/foundations/color/theme.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -493,7 +493,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "",
-                "file": "src/tokens/theme.ts",
+                "file": "src/foundations/color/theme.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -547,12 +547,12 @@
                     "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
                 }
             ],
-            "src/tokens/theme.ts": [
+            "src/foundations/color/theme.ts": [
                 {
                     "name": "darkTheme",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/tokens/theme.ts",
+                    "file": "src/foundations/color/theme.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Theme",
@@ -562,7 +562,7 @@
                     "name": "defaultTheme",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/tokens/theme.ts",
+                    "file": "src/foundations/color/theme.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
@@ -571,19 +571,19 @@
                 {
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/tokens/theme.ts",
+                    "file": "src/foundations/color/theme.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "primitives"
                 }
             ],
-            "src/tokens/primitive.ts": [
+            "src/foundations/color/primitive.ts": [
                 {
                     "name": "primitives",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/tokens/primitive.ts",
+                    "file": "src/foundations/color/primitive.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
@@ -628,13 +628,13 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "src/tokens/theme.ts": [
+            "src/foundations/color/theme.ts": [
                 {
                     "name": "Theme",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "",
-                    "file": "src/tokens/theme.ts",
+                    "file": "src/foundations/color/theme.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -801,7 +801,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/tokens/primitive.ts",
+                "filePath": "src/foundations/color/primitive.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -811,7 +811,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/tokens/theme.ts",
+                "filePath": "src/foundations/color/theme.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -821,7 +821,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/tokens/theme.ts",
+                "filePath": "src/foundations/color/theme.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -831,7 +831,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/tokens/theme.ts",
+                "filePath": "src/foundations/color/theme.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -840,7 +840,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/tokens/theme.ts",
+                "filePath": "src/foundations/color/theme.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
