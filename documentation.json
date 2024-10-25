@@ -72,7 +72,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-dcd71c45c478a78c9cbe0db9628147175b1a2b738eddc7d0893b91db805339283ae05b7c8c882519f778deb4e931e5bf5e9b915383800c1c9b6901aa88f92d33",
+            "id": "component-AppComponent-515cec8cac0af55758dd7b8cfff37326bfbd7d806a6f154452fa416efd18aa5126782a9d9e8109dc47a7591fee376bd86ad5bddaddb89c6d1788a8037e8fc721",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -113,10 +113,10 @@
                     "name": "RouterOutlet"
                 },
                 {
-                    "name": "UiButton"
+                    "name": "QaiButton"
                 },
                 {
-                    "name": "UiButtonAnchor"
+                    "name": "QaiButtonAnchor"
                 },
                 {
                     "name": "QaiHeading"
@@ -125,7 +125,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { UiButton, UiButtonAnchor, QaiHeading } from '../components';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [RouterOutlet, UiButton, UiButtonAnchor, QaiHeading],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css',\n})\nexport class AppComponent {\n  title = 'angular-components';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { QaiButton, QaiButtonAnchor, QaiHeading } from '../components';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [RouterOutlet, QaiButton, QaiButtonAnchor, QaiHeading],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css',\n})\nexport class AppComponent {\n  title = 'angular-components';\n}\n",
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",

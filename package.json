@@ -7,10 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "presb:dev": "npm run tokens:build",
+    "presb:dev": "npm run qai:build",
     "sb:dev": "ng run angular-components:storybook",
     "sb:build": "ng run angular-components:build-storybook",
-    "tokens:build": "ts-node ./build/build.ts"
+    "qai:build": "ts-node ./build/build.ts",
+    "svgo": "svgo"
   },
   "private": true,
   "dependencies": {
@@ -40,14 +41,18 @@
     "@storybook/angular": "^8.3.6",
     "@storybook/blocks": "^8.3.6",
     "@storybook/test": "^8.3.6",
+    "@types/fs-extra": "^11.0.4",
     "@types/jasmine": "~5.1.0",
+    "fs-extra": "^11.2.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "oslllo-svg-fixer": "^5.0.0",
     "storybook": "^8.3.6",
+    "svgo": "^3.3.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.4.2"
   }

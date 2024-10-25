@@ -1,4 +1,4 @@
-import { appendFileSync, writeFileSync } from 'fs';
+import * as fs from 'fs-extra';
 import { darkTheme, defaultTheme, type Theme } from '../src/foundations';
 
 const OUT_FILE_PATH = './src/css/theme.css';
@@ -24,7 +24,7 @@ const transformToVariables = (theme: Theme, selector: string) => {
 };
 
 export const themeToCss = () => {
-  writeFileSync(
+  fs.outputFileSync(
     OUT_FILE_PATH,
     `/*
  * Auto-generated on ${new Date().toDateString()}. Do not modify.
@@ -36,8 +36,8 @@ export const themeToCss = () => {
     defaultTheme,
     ':root, .theme-light'
   );
-  appendFileSync(OUT_FILE_PATH, defaultThemeCss);
+  fs.appendFileSync(OUT_FILE_PATH, defaultThemeCss);
 
   const darkThemeCss = transformToVariables(darkTheme, '.theme-dark');
-  appendFileSync(OUT_FILE_PATH, darkThemeCss);
+  fs.appendFileSync(OUT_FILE_PATH, darkThemeCss);
 };
