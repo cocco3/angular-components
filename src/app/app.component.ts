@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UiButton, UiButtonAnchor, QaiHeading } from '../components';
+import { QaiButton, QaiButtonAnchor, QaiHeading } from '../components';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UiButton, UiButtonAnchor, QaiHeading],
+  imports: [RouterOutlet, QaiButton, QaiButtonAnchor, QaiHeading],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
