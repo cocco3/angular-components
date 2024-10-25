@@ -1,0 +1,1 @@
+export * from './qai-badge';

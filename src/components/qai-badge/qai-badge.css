@@ -1,0 +1,49 @@
+:host {
+  align-items: center;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+:host.size-small {
+  font: normal 500 12px/1.5 Rubik;
+  min-height: 24px;
+  padding-block: 2px;
+  padding-inline: 8px;
+}
+
+:host.size-medium {
+  font: normal 500 14px/1.43 Rubik;
+  min-height: 28px;
+  padding-block: 4px;
+  padding-inline: 10px;
+}
+
+:host.size-large {
+  font: normal 500 14px/1.43 Rubik;
+  min-height: 32px;
+  padding-block: 4px;
+  padding-inline: 12px;
+}
+
+:host.kind-gray {
+  background-color: #f9fafb;
+  border-color: #eaecf0;
+}
+
+:host.kind-red {
+  background-color: #fef3f2;
+  border-color: #fecdca;
+}
+
+:host.kind-yellow {
+  background-color: #fffaeb;
+  border-color: #fedf89;
+}
+
+:host.kind-green {
+  background-color: #dcf3e2;
+  border-color: #b0ebc8;
+}

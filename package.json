@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "presb:dev": "npm run tokens:build",
     "sb:dev": "ng run angular-components:storybook",
     "sb:build": "ng run angular-components:build-storybook",
     "tokens:build": "ts-node ./build/build.ts"

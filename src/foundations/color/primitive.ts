@@ -11,11 +11,14 @@ export const primitives = {
   },
   red: {
     '100': '#ffebeb',
+    '900': '#f03a3a',
   },
   green: {
     '100': '#e3f7ef',
+    '900': '#41b915',
   },
   yellow: {
     '100': '#fffbdb',
+    '900': '#dde438',
   },
 };
