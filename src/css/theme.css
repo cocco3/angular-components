@@ -4,13 +4,23 @@
  */
 
 :root, .theme-light {
-  --text-primary: #001439;
-  --text-secondary: #3b3b4f;
-  --text-link: #002ead;
+  --text-primary: #101828;
+  --text-secondary: #344054;
+  --text-tertiary: #475467;
+  --text-disabled: #667085;
+  --text-placeholder: #667085;
+  --text-error: #d92d20;
+  --text-warning: #dc6803;
+  --text-success: #59da94;
 }
 
 .theme-dark {
-  --text-primary: #ffffff;
-  --text-secondary: #eaeaea;
-  --text-link: #3636ec;
+  --text-primary: #f9fafb;
+  --text-secondary: #d0d5dd;
+  --text-tertiary: #98a2b3;
+  --text-disabled: #667085;
+  --text-placeholder: #98a2b3;
+  --text-error: #f97066;
+  --text-warning: #fdb022;
+  --text-success: #84e2ae;
 }

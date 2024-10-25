@@ -210,7 +210,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  border-radius: 8px;\n  border-style: solid;\n  border-width: 1px;\n  display: inline-flex;\n}\n\n:host.size-small {\n  font: normal 500 12px/1.5 Rubik;\n  padding-block: 2px;\n  padding-inline: 8px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  padding-block: 8px;\n  padding-inline: 10px;\n}\n\n:host.size-large {\n  font: normal 500 14px/1.43 Rubik;\n  padding-block: 4px;\n  padding-inline: 12px;\n}\n\n:host.kind-gray {\n  background-color: #f9fafb;\n  border-color: #344054;\n}\n\n:host.kind-red {\n  background-color: #fef3f2;\n  border-color: #fecdca;\n}\n\n:host.kind-yellow {\n  background-color: #fffaeb;\n  border-color: #fedf89;\n}\n\n:host.kind-green {\n  background-color: #dcf3e2;\n  border-color: #b0ebc8;\n}\n",
+                    "data": ":host {\n  align-items: center;\n  border-radius: 8px;\n  border-style: solid;\n  border-width: 1px;\n  display: inline-flex;\n  justify-content: center;\n}\n\n:host.size-small {\n  font: normal 500 12px/1.5 Rubik;\n  min-height: 24px;\n  padding-block: 2px;\n  padding-inline: 8px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 28px;\n  padding-block: 4px;\n  padding-inline: 10px;\n}\n\n:host.size-large {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 32px;\n  padding-block: 4px;\n  padding-inline: 12px;\n}\n\n:host.kind-gray {\n  background-color: #f9fafb;\n  border-color: #eaecf0;\n}\n\n:host.kind-red {\n  background-color: #fef3f2;\n  border-color: #fecdca;\n}\n\n:host.kind-yellow {\n  background-color: #fffaeb;\n  border-color: #fedf89;\n}\n\n:host.kind-green {\n  background-color: #dcf3e2;\n  border-color: #b0ebc8;\n}\n",
                     "styleUrl": "./qai-badge.css"
                 }
             ],
@@ -520,7 +520,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Theme",
-                "defaultValue": "{\n  text: {\n    primary: neutral['00'],\n    secondary: neutral['50'],\n    link: blue['100'],\n  },\n}"
+                "defaultValue": "{\n  text: {\n    primary: gray['50'],\n    secondary: gray['300'],\n    tertiary: gray['400'],\n    disabled: gray['500'],\n    placeholder: gray['400'],\n    error: red['400'],\n    warning: yellow['400'],\n    success: green['400'],\n  },\n}"
             },
             {
                 "name": "defaultTheme",
@@ -530,7 +530,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  text: {\n    primary: neutral['900'],\n    secondary: neutral['800'],\n    link: blue['900'],\n  },\n}"
+                "defaultValue": "{\n  text: {\n    primary: gray['900'],\n    secondary: gray['700'],\n    tertiary: gray['600'],\n    disabled: gray['500'],\n    placeholder: gray['500'],\n    error: red['600'],\n    warning: yellow['600'],\n    success: green['600'],\n  },\n}"
             },
             {
                 "name": "primitives",
@@ -540,7 +540,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  neutral: {\n    '00': '#ffffff',\n    '50': '#eaeaea',\n    '800': '#3b3b4f',\n    '900': '#001439',\n  },\n  blue: {\n    '100': '#3636ec',\n    '900': '#002ead',\n  },\n  red: {\n    '100': '#ffebeb',\n    '900': '#f03a3a',\n  },\n  green: {\n    '100': '#e3f7ef',\n    '900': '#41b915',\n  },\n  yellow: {\n    '100': '#fffbdb',\n    '900': '#dde438',\n  },\n}"
+                "defaultValue": "{\n  gray: {\n    '25': '#fcfcfd',\n    '50': '#f9fafb',\n    '100': '#f2f4f7',\n    '200': '#eaecf0',\n    '300': '#d0d5dd',\n    '400': '#98a2b3',\n    '500': '#667085',\n    '600': '#475467',\n    '700': '#344054',\n    '800': '#182230',\n    '900': '#101828',\n    '950': '#0c111d',\n  },\n  teal: {\n    '25': '#f2f8f9',\n    '50': '#d7eaec',\n    '100': '#bcdce0',\n    '200': '#a2ced4',\n    '300': '#87c0c8',\n    '400': '#6cb2bc',\n    '500': '#52a4b0',\n    '600': '#3796a4',\n    '700': '#1c8898',\n    '800': '#027b8c',\n    '900': '#016f83',\n    '950': '#00647b',\n  },\n  red: {\n    '25': '#fffbfa',\n    '50': '#fef3f2',\n    '100': '#fee4e2',\n    '200': '#fecdca',\n    '300': '#fda29b',\n    '400': '#f97066',\n    '500': '#f04438',\n    '600': '#d92d20',\n    '700': '#b42318',\n    '800': '#912018',\n    '900': '#7a271a',\n    '950': '#55160c',\n  },\n  yellow: {\n    '25': '#fffcf5',\n    '50': '#fffaeb',\n    '100': '#fef0c7',\n    '200': '#fedf89',\n    '300': '#fec84b',\n    '400': '#fdb022',\n    '500': '#f79009',\n    '600': '#dc6803',\n    '700': '#b54708',\n    '800': '#93370d',\n    '900': '#7a2e0e',\n    '950': '#4e1d09',\n  },\n  green: {\n    '25': '#f2f8f0',\n    '50': '#dcf3e2',\n    '100': '#c6efd5',\n    '200': '#b0ebc8',\n    '300': '#9ae6bb',\n    '400': '#84e2ae',\n    '500': '#6edea1',\n    '600': '#59da94',\n    '700': '#48ba7c',\n    '800': '#389b65',\n    '900': '#1c8256',\n    '950': '#006947',\n  },\n}"
             },
             {
                 "name": "QaiBadgeKinds",
@@ -694,7 +694,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Theme",
-                    "defaultValue": "{\n  text: {\n    primary: neutral['00'],\n    secondary: neutral['50'],\n    link: blue['100'],\n  },\n}"
+                    "defaultValue": "{\n  text: {\n    primary: gray['50'],\n    secondary: gray['300'],\n    tertiary: gray['400'],\n    disabled: gray['500'],\n    placeholder: gray['400'],\n    error: red['400'],\n    warning: yellow['400'],\n    success: green['400'],\n  },\n}"
                 },
                 {
                     "name": "defaultTheme",
@@ -704,7 +704,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  text: {\n    primary: neutral['900'],\n    secondary: neutral['800'],\n    link: blue['900'],\n  },\n}"
+                    "defaultValue": "{\n  text: {\n    primary: gray['900'],\n    secondary: gray['700'],\n    tertiary: gray['600'],\n    disabled: gray['500'],\n    placeholder: gray['500'],\n    error: red['600'],\n    warning: yellow['600'],\n    success: green['600'],\n  },\n}"
                 },
                 {
                     "ctype": "miscellaneous",
@@ -725,7 +725,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  neutral: {\n    '00': '#ffffff',\n    '50': '#eaeaea',\n    '800': '#3b3b4f',\n    '900': '#001439',\n  },\n  blue: {\n    '100': '#3636ec',\n    '900': '#002ead',\n  },\n  red: {\n    '100': '#ffebeb',\n    '900': '#f03a3a',\n  },\n  green: {\n    '100': '#e3f7ef',\n    '900': '#41b915',\n  },\n  yellow: {\n    '100': '#fffbdb',\n    '900': '#dde438',\n  },\n}"
+                    "defaultValue": "{\n  gray: {\n    '25': '#fcfcfd',\n    '50': '#f9fafb',\n    '100': '#f2f4f7',\n    '200': '#eaecf0',\n    '300': '#d0d5dd',\n    '400': '#98a2b3',\n    '500': '#667085',\n    '600': '#475467',\n    '700': '#344054',\n    '800': '#182230',\n    '900': '#101828',\n    '950': '#0c111d',\n  },\n  teal: {\n    '25': '#f2f8f9',\n    '50': '#d7eaec',\n    '100': '#bcdce0',\n    '200': '#a2ced4',\n    '300': '#87c0c8',\n    '400': '#6cb2bc',\n    '500': '#52a4b0',\n    '600': '#3796a4',\n    '700': '#1c8898',\n    '800': '#027b8c',\n    '900': '#016f83',\n    '950': '#00647b',\n  },\n  red: {\n    '25': '#fffbfa',\n    '50': '#fef3f2',\n    '100': '#fee4e2',\n    '200': '#fecdca',\n    '300': '#fda29b',\n    '400': '#f97066',\n    '500': '#f04438',\n    '600': '#d92d20',\n    '700': '#b42318',\n    '800': '#912018',\n    '900': '#7a271a',\n    '950': '#55160c',\n  },\n  yellow: {\n    '25': '#fffcf5',\n    '50': '#fffaeb',\n    '100': '#fef0c7',\n    '200': '#fedf89',\n    '300': '#fec84b',\n    '400': '#fdb022',\n    '500': '#f79009',\n    '600': '#dc6803',\n    '700': '#b54708',\n    '800': '#93370d',\n    '900': '#7a2e0e',\n    '950': '#4e1d09',\n  },\n  green: {\n    '25': '#f2f8f0',\n    '50': '#dcf3e2',\n    '100': '#c6efd5',\n    '200': '#b0ebc8',\n    '300': '#9ae6bb',\n    '400': '#84e2ae',\n    '500': '#6edea1',\n    '600': '#59da94',\n    '700': '#48ba7c',\n    '800': '#389b65',\n    '900': '#1c8256',\n    '950': '#006947',\n  },\n}"
                 }
             ],
             "src/components/qai-badge/qai-badge.ts": [
