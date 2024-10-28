@@ -618,7 +618,7 @@
         },
         {
             "name": "ScoreSquare",
-            "id": "component-ScoreSquare-9024de4a128978fe3f6badce7dbc9fb65b67d2fa70f35fea827758839df898d4fe2575704df4e11f55f054da97efab8aad1c70e4b86b4123e7d59fb38ed3436f",
+            "id": "component-ScoreSquare-14d8a3e121948638f44ea112bb6f6505a4cb2523b93f4792e3530d5b5de4889e7bc92d5faef68c9a3843ba281cc26fc2ba2a67d8530c84eba062ba1c6c7fb646",
             "file": "src/components/score-square/score-square.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -650,6 +650,7 @@
                 {
                     "required": true,
                     "name": "max",
+                    "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
@@ -660,6 +661,7 @@
                 {
                     "required": true,
                     "name": "score",
+                    "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
@@ -689,11 +691,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, HostBinding, Input } from '@angular/core';\n\nexport const ScoreSquareKinds = ['success', 'fail'];\nexport type ScoreSquareKind = (typeof ScoreSquareKinds)[number];\n\n@Component({\n  exportAs: 'scoreSquare',\n  selector: 'score-square',\n  standalone: true,\n  styleUrls: ['./score-square.css'],\n  templateUrl: './score-square.html',\n})\nexport class ScoreSquare {\n  @Input({ required: true }) score!: number;\n  @Input({ required: true }) max!: number;\n  @Input({ required: true }) kind!: ScoreSquareKind;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, HostBinding, Input } from '@angular/core';\n\nexport const ScoreSquareKinds = ['pass', 'fail'];\nexport type ScoreSquareKind = (typeof ScoreSquareKinds)[number];\n\n@Component({\n  exportAs: 'scoreSquare',\n  selector: 'score-square',\n  standalone: true,\n  styleUrls: ['./score-square.css'],\n  templateUrl: './score-square.html',\n})\nexport class ScoreSquare {\n  @Input({ required: true }) score = 0;\n  @Input({ required: true }) max = 0;\n  @Input({ required: true }) kind!: ScoreSquareKind;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n    };\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  align-items: center;\n  border-radius: 8px;\n  border-style: solid;\n  border-width: 1px;\n  display: flex;\n  flex-direction: column;\n  height: 120px;\n  justify-content: center;\n  padding-block: 24px;\n  padding-inline: 24px;\n  width: 120px;\n}\n\n:host.kind-success {\n  border-color: #9ae6bb;\n}\n\n:host.kind-success .score {\n  color: #6edea1;\n}\n\n:host.kind-fail {\n  border-color: #fda29b;\n}\n\n:host.kind-fail .score {\n  color: #f04438;\n}\n\n.title {\n  color: #313131;\n  font: normal 700 16px/1.5 Rubik;\n}\n\n.score {\n  font-size: 72px;\n  font-weight: 700;\n}\n\n.max {\n  color: #737373;\n  font: normal 500 16px/1.5 Rubik;\n}\n",
+                    "data": ":host {\n  align-items: center;\n  border-radius: 8px;\n  border-style: solid;\n  border-width: 1px;\n  display: flex;\n  flex-direction: column;\n  font-family: Rubik;\n  height: 200px;\n  justify-content: center;\n  padding-block: 24px;\n  padding-inline: 24px;\n  width: 200px;\n}\n\n:host.kind-pass {\n  border-color: #9ae6bb;\n}\n\n:host.kind-pass .score {\n  color: #6edea1;\n}\n\n:host.kind-fail {\n  border-color: #fda29b;\n}\n\n:host.kind-fail .score {\n  color: #f04438;\n}\n\n.title {\n  color: #313131;\n  font: normal 700 16px/1.5 Rubik;\n}\n\n.score {\n  font: normal 700 72px/1.25 Rubik;\n}\n\n.max {\n  color: #737373;\n  font: normal 500 16px/1.5 Rubik;\n}\n",
                     "styleUrl": "./score-square.css"
                 }
             ],
@@ -710,7 +712,7 @@
                     }
                 }
             },
-            "templateData": "<div class=\"title\">Your Score</div>\n<div class=\"score\"{{ score }}></div>\n<div class=\"max\">Out of {{ max }}</div>\n"
+            "templateData": "<div class=\"title\">Your Score</div>\n<div class=\"score\">{{ score }}</div>\n<div class=\"max\">Out of {{ max }}</div>\n"
         }
     ],
     "modules": [],
@@ -844,7 +846,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "['success', 'fail']"
+                "defaultValue": "['pass', 'fail']"
             },
             {
                 "name": "svgIconStore",
@@ -1122,7 +1124,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "['success', 'fail']"
+                    "defaultValue": "['pass', 'fail']"
                 }
             ],
             "src/foundations/icons/svgIconStore.ts": [

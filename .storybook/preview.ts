@@ -5,6 +5,10 @@ setCompodocJson(docJson);
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      canvas: { sourceState: 'shown' },
+    },
+
     controls: {
       expanded: true,
       matchers: {
