@@ -18,7 +18,7 @@
 }
 
 :host.kind-pass .score {
-  color: #6edea1;
+  color: var(--text-success);
 }
 
 :host.kind-fail {
@@ -26,11 +26,11 @@
 }
 
 :host.kind-fail .score {
-  color: #f04438;
+  color: var(--text-error);
 }
 
 .title {
-  color: #313131;
+  color: var(--text-primary);
   font: normal 700 16px/1.5 Rubik;
 }
 
@@ -39,6 +39,6 @@
 }
 
 .max {
-  color: #737373;
+  color: var(--text-tertiary);
   font: normal 500 16px/1.5 Rubik;
 }
