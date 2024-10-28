@@ -1,19 +1,11 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import * as SVGFixer from 'oslllo-svg-fixer';
 import { optimize, type Config } from 'svgo';
 import { readDirectory } from './readDirectory';
 
 const ICONS_DIR = 'src/foundations/icons/svgs';
 
 export const optimizeSvgIcons = async () => {
-  // const svgFixer = SVGFixer(ICONS_DIR, ICONS_DIR, {
-  //   showProgressBar: true,
-  //   throwIfDestinationDoesNotExist: true,
-  // });
-
-  // await svgFixer.fix();
-
   const icons = readDirectory(ICONS_DIR, 'svg');
 
   icons.forEach(({ name, svg }) => {

@@ -50,7 +50,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "oslllo-svg-fixer": "^5.0.0",
     "storybook": "^8.3.6",
     "svgo": "^3.3.2",
     "ts-node": "^10.9.2",
