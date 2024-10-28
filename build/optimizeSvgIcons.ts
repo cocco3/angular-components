@@ -6,13 +6,13 @@ import { readDirectory } from './readDirectory';
 
 const ICONS_DIR = 'src/foundations/icons/svgs';
 
-const svgFixer = SVGFixer(ICONS_DIR, ICONS_DIR, {
-  showProgressBar: true,
-  throwIfDestinationDoesNotExist: true,
-});
-
 export const optimizeSvgIcons = async () => {
-  await svgFixer.fix();
+  // const svgFixer = SVGFixer(ICONS_DIR, ICONS_DIR, {
+  //   showProgressBar: true,
+  //   throwIfDestinationDoesNotExist: true,
+  // });
+
+  // await svgFixer.fix();
 
   const icons = readDirectory(ICONS_DIR, 'svg');
 
