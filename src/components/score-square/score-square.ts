@@ -1,6 +1,6 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
-export const ScoreSquareKinds = ['success', 'fail'];
+export const ScoreSquareKinds = ['pass', 'fail'];
 export type ScoreSquareKind = (typeof ScoreSquareKinds)[number];
 
 @Component({

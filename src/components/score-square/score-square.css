@@ -13,11 +13,11 @@
   width: 200px;
 }
 
-:host.kind-success {
+:host.kind-pass {
   border-color: #9ae6bb;
 }
 
-:host.kind-success .score {
+:host.kind-pass .score {
   color: #6edea1;
 }
 

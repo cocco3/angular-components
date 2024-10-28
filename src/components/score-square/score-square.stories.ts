@@ -13,8 +13,8 @@ export default meta;
 
 type Story = StoryObj<ScoreSquare>;
 
-export const Success: Story = {
-  args: { kind: 'success', score: 4.5, max: 5 },
+export const Pass: Story = {
+  args: { kind: 'pass', score: 4.5, max: 5 },
 };
 
 export const Fail: Story = {
