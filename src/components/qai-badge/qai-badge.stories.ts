@@ -9,14 +9,14 @@ import {
 const meta: Meta<QaiBadge> = {
   component: QaiBadge,
   tags: ['autodocs'],
-  args: {
-    shape: 'rectangle',
-    size: 'medium',
-  },
   argTypes: {
     kind: { options: QaiBadgeKinds, control: { type: 'radio' } },
     shape: { options: QaiBadgeShapes, control: { type: 'radio' } },
     size: { options: QaiBadgeSizes, control: { type: 'radio' } },
+  },
+  args: {
+    shape: 'rectangle',
+    size: 'medium',
   },
 };
 

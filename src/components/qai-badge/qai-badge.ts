@@ -10,11 +10,11 @@ export const QaiBadgeSizes = ['small', 'medium', 'large'];
 export type QaiBadgeSize = (typeof QaiBadgeSizes)[number];
 
 @Component({
-  standalone: true,
-  selector: 'qai-badge',
-  template: `{{ label }}`,
-  styleUrls: ['./qai-badge.css'],
   exportAs: 'qaiBadge',
+  selector: 'qai-badge',
+  standalone: true,
+  styleUrls: ['./qai-badge.css'],
+  template: `{{ label }}`,
 })
 export class QaiBadge {
   @Input({ required: true }) label!: string;

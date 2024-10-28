@@ -1,0 +1,22 @@
+import type { Meta, StoryObj } from '@storybook/angular';
+import { ScoreSquare, ScoreSquareKinds } from './score-square';
+
+const meta: Meta<ScoreSquare> = {
+  component: ScoreSquare,
+  tags: ['autodocs'],
+  argTypes: {
+    kind: { options: ScoreSquareKinds, control: { type: 'radio' } },
+  },
+};
+
+export default meta;
+
+type Story = StoryObj<ScoreSquare>;
+
+export const Success: Story = {
+  args: { kind: 'success', score: 4.5, max: 5 },
+};
+
+export const Fail: Story = {
+  args: { kind: 'fail', score: 2, max: 10 },
+};

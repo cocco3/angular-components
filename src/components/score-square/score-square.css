@@ -1,0 +1,44 @@
+:host {
+  align-items: center;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  font-family: Rubik;
+  height: 200px;
+  justify-content: center;
+  padding-block: 24px;
+  padding-inline: 24px;
+  width: 200px;
+}
+
+:host.kind-success {
+  border-color: #9ae6bb;
+}
+
+:host.kind-success .score {
+  color: #6edea1;
+}
+
+:host.kind-fail {
+  border-color: #fda29b;
+}
+
+:host.kind-fail .score {
+  color: #f04438;
+}
+
+.title {
+  color: #313131;
+  font: normal 700 16px/1.5 Rubik;
+}
+
+.score {
+  font: normal 700 72px/1.25 Rubik;
+}
+
+.max {
+  color: #737373;
+  font: normal 500 16px/1.5 Rubik;
+}
