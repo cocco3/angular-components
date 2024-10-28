@@ -28,7 +28,7 @@ export const themeToCss = () => {
     OUT_FILE_PATH,
     `/*
  * Auto-generated on ${new Date().toDateString()}. Do not modify.
- * Update variables in ./src/tokens then run "build:tokens" script.
+ * Update variables in ./src/tokens then run "qai:build" script.
  */\n`
   );
 

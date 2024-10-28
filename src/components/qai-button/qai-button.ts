@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import {
   booleanAttribute,
   Component,
@@ -35,26 +34,24 @@ class QaiButtonBase {
  *  to the native underlying element.
  */
 @Component({
-  standalone: true,
-  imports: [CommonModule],
-  selector: 'button[qai-button]',
-  templateUrl: './qai-button.html',
-  styleUrls: ['./qai-button.css'],
   exportAs: 'qaiButton',
   host: {
     '[disabled]': 'disabled',
   },
+  selector: 'button[qai-button]',
+  standalone: true,
+  styleUrls: ['./qai-button.css'],
+  templateUrl: './qai-button.html',
 })
 export class QaiButton extends QaiButtonBase {
   @Input({ transform: booleanAttribute }) disabled? = false;
 }
 
 @Component({
-  standalone: true,
-  imports: [CommonModule],
-  selector: 'a[qai-button]',
-  templateUrl: './qai-button.html',
-  styleUrls: ['./qai-button.css'],
   exportAs: 'uiButtonAnchor',
+  selector: 'a[qai-button]',
+  standalone: true,
+  styleUrls: ['./qai-button.css'],
+  templateUrl: './qai-button.html',
 })
 export class QaiButtonAnchor extends QaiButtonBase {}

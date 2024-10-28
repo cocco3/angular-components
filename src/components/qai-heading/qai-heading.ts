@@ -11,14 +11,14 @@ export type QaiHeadingSize = (typeof QaiHeadingSizes)[number];
  *  to the native underlying element.
  */
 @Component({
-  standalone: true,
+  exportAs: 'qaiHeading',
   selector: `
     h1[qai-heading], h2[qai-heading], h3[qai-heading],
     h4[qai-heading], h5[qai-heading], h6[qai-heading]
   `,
-  templateUrl: './qai-heading.html',
+  standalone: true,
   styleUrls: ['./qai-heading.css'],
-  exportAs: 'qaiHeading',
+  template: `<ng-content />`,
 })
 export class QaiHeading {
   @Input({ required: true }) size!: QaiHeadingSize;

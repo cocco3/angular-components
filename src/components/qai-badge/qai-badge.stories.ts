@@ -11,6 +11,7 @@ const meta: Meta<QaiBadge> = {
 };
 
 export default meta;
+
 type Story = StoryObj<QaiBadge>;
 
 export const Gray: Story = {

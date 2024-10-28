@@ -8,8 +8,8 @@ export type QaiBadgeSize = (typeof QaiBadgeSizes)[number];
 
 @Component({
   standalone: true,
-  selector: `qai-badge`,
-  templateUrl: './qai-badge.html',
+  selector: 'qai-badge',
+  template: `{{ label }}`,
   styleUrls: ['./qai-badge.css'],
   exportAs: 'qaiBadge',
 })

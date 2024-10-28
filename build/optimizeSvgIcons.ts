@@ -4,9 +4,9 @@ import * as SVGFixer from 'oslllo-svg-fixer';
 import { optimize, type Config } from 'svgo';
 import { readDirectory } from './readDirectory';
 
-const ICON_DIRECTORY = 'src/foundations/icons/svgs';
+const ICONS_DIR = 'src/foundations/icons/svgs';
 
-const svgFixer = SVGFixer(ICON_DIRECTORY, ICON_DIRECTORY, {
+const svgFixer = SVGFixer(ICONS_DIR, ICONS_DIR, {
   showProgressBar: true,
   throwIfDestinationDoesNotExist: true,
 });
@@ -14,11 +14,12 @@ const svgFixer = SVGFixer(ICON_DIRECTORY, ICON_DIRECTORY, {
 export const optimizeSvgIcons = async () => {
   await svgFixer.fix();
 
-  const icons = readDirectory(ICON_DIRECTORY, 'svg');
+  const icons = readDirectory(ICONS_DIR, 'svg');
 
   icons.forEach(({ name, svg }) => {
     const result = optimize(svg, SVGO_CONFIG);
-    fs.outputFileSync(path.join(ICON_DIRECTORY, `${name}.svg`), result.data);
+    const outFilePath = path.join(ICONS_DIR, `${name}.svg`);
+    fs.outputFileSync(outFilePath, result.data);
   });
 };
 
