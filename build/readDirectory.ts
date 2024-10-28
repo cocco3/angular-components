@@ -14,5 +14,6 @@ export const readDirectory = (src: string, ext?: string) => {
         name: path.basename(file, `.${ext.toLowerCase()}`),
         svg,
       };
-    });
+    })
+    .sort((a, b) => b.name.localeCompare(a.name));
 };

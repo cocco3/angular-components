@@ -5,7 +5,7 @@ const meta: Meta<QaiIcon> = {
   component: QaiIcon,
   tags: ['autodocs'],
   argTypes: {
-    kind: { options: QaiIconKinds.sort(), control: { type: 'select' } },
+    kind: { options: QaiIconKinds, control: { type: 'select' } },
   },
   args: {
     size: '24px',
