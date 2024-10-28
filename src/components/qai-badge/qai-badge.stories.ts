@@ -1,11 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { QaiBadge, QaiBadgeKinds, QaiBadgeSizes } from './qai-badge';
+import {
+  QaiBadge,
+  QaiBadgeKinds,
+  QaiBadgeShapes,
+  QaiBadgeSizes,
+} from './qai-badge';
 
 const meta: Meta<QaiBadge> = {
   component: QaiBadge,
   tags: ['autodocs'],
+  args: {
+    shape: 'rectangle',
+    size: 'medium',
+  },
   argTypes: {
     kind: { options: QaiBadgeKinds, control: { type: 'radio' } },
+    shape: { options: QaiBadgeShapes, control: { type: 'radio' } },
     size: { options: QaiBadgeSizes, control: { type: 'radio' } },
   },
 };
@@ -15,17 +25,17 @@ export default meta;
 type Story = StoryObj<QaiBadge>;
 
 export const Gray: Story = {
-  args: { kind: 'gray', size: 'medium', label: 'Gray' },
+  args: { kind: 'gray', label: 'Gray' },
 };
 
 export const Red: Story = {
-  args: { kind: 'red', size: 'medium', label: 'Red' },
+  args: { kind: 'red', label: 'Red' },
 };
 
 export const Yellow: Story = {
-  args: { kind: 'yellow', size: 'medium', label: 'Yellow' },
+  args: { kind: 'yellow', label: 'Yellow' },
 };
 
 export const Green: Story = {
-  args: { kind: 'green', size: 'medium', label: 'Green' },
+  args: { kind: 'green', label: 'Green' },
 };

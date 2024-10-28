@@ -135,7 +135,7 @@
         },
         {
             "name": "QaiBadge",
-            "id": "component-QaiBadge-eb20d753de7c27f3b32a8ea61b837936bb43cf4f68472d47be00a29a5c22df046eee08c95ab656de8d7764944cd7e1900f6d0abdbc24fa6e2696f7c1dbfb52dd",
+            "id": "component-QaiBadge-fdb3ca33b423bd98f308a6488042b98cbdb52da886ac9412b3539b457fa496f6bdf39a5d31bee1533bdfb19aa9af12876391c9f8b4c2b9f8131546fa58ea8d99",
             "file": "src/components/qai-badge/qai-badge.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -159,7 +159,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 19,
+                    "line": 23,
                     "type": "QaiBadgeKind",
                     "decorators": []
                 },
@@ -169,8 +169,18 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 17,
+                    "line": 20,
                     "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "shape",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 21,
+                    "type": "QaiBadgeShape",
                     "decorators": []
                 },
                 {
@@ -179,7 +189,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 18,
+                    "line": 22,
                     "type": "QaiBadgeSize",
                     "decorators": []
                 }
@@ -194,7 +204,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 26,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": []
                 }
@@ -205,11 +215,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, HostBinding, Input } from '@angular/core';\n\nexport const QaiBadgeKinds = ['gray', 'red', 'yellow', 'green'];\nexport type QaiBadgeKind = (typeof QaiBadgeKinds)[number];\n\nexport const QaiBadgeSizes = ['small', 'medium', 'large'];\nexport type QaiBadgeSize = (typeof QaiBadgeSizes)[number];\n\n@Component({\n  standalone: true,\n  selector: 'qai-badge',\n  template: `{{ label }}`,\n  styleUrls: ['./qai-badge.css'],\n  exportAs: 'qaiBadge',\n})\nexport class QaiBadge {\n  @Input({ required: true }) label!: string;\n  @Input({ required: true }) size!: QaiBadgeSize;\n  @Input({ required: true }) kind!: QaiBadgeKind;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, HostBinding, Input } from '@angular/core';\n\nexport const QaiBadgeKinds = ['gray', 'red', 'yellow', 'green'];\nexport type QaiBadgeKind = (typeof QaiBadgeKinds)[number];\n\nexport const QaiBadgeShapes = ['round', 'rectangle'];\nexport type QaiBadgeShape = (typeof QaiBadgeShapes)[number];\n\nexport const QaiBadgeSizes = ['small', 'medium', 'large'];\nexport type QaiBadgeSize = (typeof QaiBadgeSizes)[number];\n\n@Component({\n  standalone: true,\n  selector: 'qai-badge',\n  template: `{{ label }}`,\n  styleUrls: ['./qai-badge.css'],\n  exportAs: 'qaiBadge',\n})\nexport class QaiBadge {\n  @Input({ required: true }) label!: string;\n  @Input({ required: true }) shape!: QaiBadgeShape;\n  @Input({ required: true }) size!: QaiBadgeSize;\n  @Input({ required: true }) kind!: QaiBadgeKind;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.shape}`]: !!this.shape,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  align-items: center;\n  border-radius: 8px;\n  border-style: solid;\n  border-width: 1px;\n  display: inline-flex;\n  justify-content: center;\n}\n\n:host.size-small {\n  font: normal 500 12px/1.5 Rubik;\n  min-height: 24px;\n  padding-block: 2px;\n  padding-inline: 8px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 28px;\n  padding-block: 4px;\n  padding-inline: 10px;\n}\n\n:host.size-large {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 32px;\n  padding-block: 4px;\n  padding-inline: 12px;\n}\n\n:host.kind-gray {\n  background-color: #f9fafb;\n  border-color: #eaecf0;\n  color: #344054;\n}\n\n:host.kind-red {\n  background-color: #fef3f2;\n  border-color: #fecdca;\n  color: #b42318;\n}\n\n:host.kind-yellow {\n  background-color: #fffaeb;\n  border-color: #fedf89;\n  color: #b54708;\n}\n\n:host.kind-green {\n  background-color: #dcf3e2;\n  border-color: #b0ebc8;\n  color: #48ba7c;\n}\n",
+                    "data": ":host {\n  align-items: center;\n  border-style: solid;\n  border-width: 1px;\n  display: inline-flex;\n  justify-content: center;\n}\n\n:host.shape-rectangle {\n  border-radius: 8px;\n}\n\n:host.shape-round {\n  border-radius: 999px;\n}\n\n:host.size-small {\n  font: normal 500 12px/1.5 Rubik;\n  min-height: 24px;\n  padding-block: 2px;\n  padding-inline: 8px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 28px;\n  padding-block: 4px;\n  padding-inline: 10px;\n}\n\n:host.size-large {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 32px;\n  padding-block: 4px;\n  padding-inline: 12px;\n}\n\n:host.kind-gray {\n  background-color: #f9fafb;\n  border-color: #eaecf0;\n  color: #344054;\n}\n\n:host.kind-red {\n  background-color: #fef3f2;\n  border-color: #fecdca;\n  color: #b42318;\n}\n\n:host.kind-yellow {\n  background-color: #fffaeb;\n  border-color: #fedf89;\n  color: #b54708;\n}\n\n:host.kind-green {\n  background-color: #dcf3e2;\n  border-color: #b0ebc8;\n  color: #48ba7c;\n}\n",
                     "styleUrl": "./qai-badge.css"
                 }
             ],
@@ -222,7 +232,7 @@
                         "name": "cssClass",
                         "type": "",
                         "returnType": "",
-                        "line": 22
+                        "line": 26
                     }
                 }
             }
@@ -671,6 +681,16 @@
                 "defaultValue": "['gray', 'red', 'yellow', 'green']"
             },
             {
+                "name": "QaiBadgeShapes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/components/qai-badge/qai-badge.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "['round', 'rectangle']"
+            },
+            {
                 "name": "QaiBadgeSizes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -744,6 +764,17 @@
         "typealiases": [
             {
                 "name": "QaiBadgeKind",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "src/components/qai-badge/qai-badge.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 199
+            },
+            {
+                "name": "QaiBadgeShape",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "",
@@ -911,6 +942,16 @@
                     "defaultValue": "['gray', 'red', 'yellow', 'green']"
                 },
                 {
+                    "name": "QaiBadgeShapes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/components/qai-badge/qai-badge.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "['round', 'rectangle']"
+                },
+                {
                     "name": "QaiBadgeSizes",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -974,6 +1015,17 @@
             "src/components/qai-badge/qai-badge.ts": [
                 {
                     "name": "QaiBadgeKind",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "",
+                    "file": "src/components/qai-badge/qai-badge.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 199
+                },
+                {
+                    "name": "QaiBadgeShape",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "",
@@ -1090,7 +1142,7 @@
                 "linktype": "component",
                 "name": "QaiBadge",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -1099,6 +1151,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "QaiBadgeKinds",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/qai-badge/qai-badge.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "QaiBadgeShapes",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1119,6 +1181,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
                 "name": "QaiBadgeKind",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/qai-badge/qai-badge.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "QaiBadgeShape",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
