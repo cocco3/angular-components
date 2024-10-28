@@ -2,13 +2,13 @@
   align-items: center;
   background-color: var(--button-background-color-default);
   border: none;
-  border-radius: 8px;
+  border-color: var(--button-border-color-default);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 999px;
   box-sizing: border-box;
-  color: var(--text-primary);
+  color: var(--button-text-color-default);
   display: inline-flex;
-  font-family: sans-serif;
-  font-weight: normal;
-  font-size: var(--button-font-size);
   gap: 4px;
   line-height: 1.5;
   margin: 0;
@@ -39,19 +39,43 @@
 }
 
 :host.kind-primary {
-  --button-background-color-default: #73df81;
-  --button-background-color-hover: #83ea90;
+  --button-background-color-default: #027b8c;
+  --button-background-color-hover: #016f83;
+  --button-border-color-default: transparent;
+  --button-text-color-default: #ffffff;
 }
 
 :host.kind-secondary {
-  --button-background-color-default: #2de2e2;
-  --button-background-color-hover: #62d7d7;
+  --button-background-color-default: #ffffff;
+  --button-background-color-hover: #f9fafb;
+  --button-border-color-default: #d0d5dd;
+  --button-text-color-default: #344054;
+}
+
+:host.kind-tertiary {
+  --button-background-color-default: #ffffff;
+  --button-background-color-hover: #d7eaec;
+  --button-border-color-default: #87c0c8;
+  --button-text-color-default: #016f83;
 }
 
 :host.size-small {
-  --button-font-size: 12px;
+  font: normal 600 14px/1.43 Rubik;
+  min-height: 36px;
+  padding-block: 8px;
+  padding-inline: 12px;
 }
 
 :host.size-medium {
-  --button-font-size: 16px;
+  font: normal 500 14px/1.43 Rubik;
+  min-height: 40px;
+  padding-block: 10px;
+  padding-inline: 14px;
+}
+
+:host.size-large {
+  font: normal 500 16px/1.5 Rubik;
+  min-height: 44px;
+  padding-block: 12px;
+  padding-inline: 16px;
 }

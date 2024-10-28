@@ -6,10 +6,10 @@ import {
   Input,
 } from '@angular/core';
 
-export const QaiButtonKinds = ['primary', 'secondary'];
+export const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];
 export type QaiButtonKind = (typeof QaiButtonKinds)[number];
 
-export const QaiButtonSizes = ['small', 'medium'];
+export const QaiButtonSizes = ['small', 'medium', 'large'];
 export type QaiButtonSize = (typeof QaiButtonSizes)[number];
 
 @Directive()

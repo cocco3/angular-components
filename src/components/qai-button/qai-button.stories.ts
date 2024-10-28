@@ -32,6 +32,10 @@ export const Secondary: Story = {
   args: { kind: 'secondary', size: 'medium', content: 'Secondary' },
 };
 
+export const Tertiary: Story = {
+  args: { kind: 'tertiary', size: 'medium', content: 'Tertiary' },
+};
+
 export const Disabled: Story = {
   args: {
     kind: 'primary',
