@@ -31,19 +31,23 @@
 :host.kind-gray {
   background-color: #f9fafb;
   border-color: #eaecf0;
+  color: #344054;
 }
 
 :host.kind-red {
   background-color: #fef3f2;
   border-color: #fecdca;
+  color: #b42318;
 }
 
 :host.kind-yellow {
   background-color: #fffaeb;
   border-color: #fedf89;
+  color: #b54708;
 }
 
 :host.kind-green {
   background-color: #dcf3e2;
   border-color: #b0ebc8;
+  color: #48ba7c;
 }

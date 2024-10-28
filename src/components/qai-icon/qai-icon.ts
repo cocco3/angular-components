@@ -20,6 +20,8 @@ const getSvgForName = (name: QaiIconKind): string => {
 })
 export class QaiIcon {
   @Input({ required: true }) kind!: QaiIconKind;
+
+  /** Any valid CSS size value. */
   @Input({ required: true }) size = '24px';
 
   protected get svg(): SafeHtml {
