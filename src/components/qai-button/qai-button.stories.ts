@@ -3,7 +3,11 @@ import { argsToAttributes } from '../../../.storybook/utilities';
 import { QaiButton, QaiButtonKinds, QaiButtonSizes } from './qai-button';
 import { QaiIcon, QaiIconKinds, type QaiIconKind } from '../qai-icon';
 
-type QaiButtonStory = QaiButton & { content: string; startIcon?: QaiIconKind };
+type QaiButtonStory = QaiButton & {
+  content: string;
+  startIcon?: QaiIconKind;
+  endIcon?: QaiIconKind;
+};
 
 const meta: Meta<QaiButtonStory> = {
   component: QaiButton,
@@ -13,6 +17,7 @@ const meta: Meta<QaiButtonStory> = {
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },
     size: { options: QaiButtonSizes, control: { type: 'radio' } },
     startIcon: { options: QaiIconKinds, control: { type: 'select' } },
+    endIcon: { options: QaiIconKinds, control: { type: 'select' } },
   },
   decorators: [moduleMetadata({ imports: [QaiIcon] })],
   parameters: {
@@ -23,11 +28,12 @@ const meta: Meta<QaiButtonStory> = {
   },
 
   // custom render to allow content projection
-  render: ({ content, startIcon, ...args }) => ({
+  render: ({ content, startIcon, endIcon, ...args }) => ({
     props: args,
     template: `<button qai-button ${argsToAttributes(args)}>
-    ${startIcon ? `<qai-icon kind="${startIcon}" />` : ''}
+    ${startIcon ? `<qai-icon kind="${startIcon}" positionStart />` : ''}
     ${content}
+    ${endIcon ? `<qai-icon kind="${endIcon}" positionEnd />` : ''}
     </button>`,
   }),
 };
@@ -56,11 +62,20 @@ export const Disabled: Story = {
   },
 };
 
-export const Icon: Story = {
+export const StartIcon: Story = {
   args: {
     kind: 'primary',
     size: 'medium',
     content: 'Icon',
     startIcon: 'arrow-left',
+  },
+};
+
+export const EndIcon: Story = {
+  args: {
+    kind: 'primary',
+    size: 'medium',
+    content: 'Icon',
+    endIcon: 'arrow-right',
   },
 };
