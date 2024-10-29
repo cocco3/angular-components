@@ -11,7 +11,6 @@ type QaiButtonStory = QaiButton & {
 
 const meta: Meta<QaiButtonStory> = {
   component: QaiButton,
-  subcomponents: { QaiIcon },
   tags: ['autodocs'],
   argTypes: {
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },

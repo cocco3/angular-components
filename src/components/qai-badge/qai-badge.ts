@@ -6,20 +6,20 @@ export type QaiBadgeKind = (typeof QaiBadgeKinds)[number];
 export const QaiBadgeShapes = ['round', 'rectangle'];
 export type QaiBadgeShape = (typeof QaiBadgeShapes)[number];
 
-export const QaiBadgeSizes = ['small', 'medium', 'large'];
-export type QaiBadgeSize = (typeof QaiBadgeSizes)[number];
-
 @Component({
   exportAs: 'qaiBadge',
   selector: 'qai-badge',
   standalone: true,
   styleUrls: ['./qai-badge.css'],
-  template: `{{ label }}`,
+  template: `
+    <ng-content select="[positionStart]" />
+    <span class="text">{{ label }}</span>
+    <ng-content select="[positionEnd]" />
+  `,
 })
 export class QaiBadge {
   @Input({ required: true }) label!: string;
   @Input({ required: true }) shape!: QaiBadgeShape;
-  @Input({ required: true }) size!: QaiBadgeSize;
   @Input({ required: true }) kind!: QaiBadgeKind;
 
   @HostBinding('class')
@@ -27,7 +27,6 @@ export class QaiBadge {
     return {
       [`kind-${this.kind}`]: !!this.kind,
       [`shape-${this.shape}`]: !!this.shape,
-      [`size-${this.size}`]: !!this.size,
     };
   }
 }

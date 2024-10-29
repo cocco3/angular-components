@@ -3,7 +3,16 @@
   border-style: solid;
   border-width: 1px;
   display: inline-flex;
+  font: normal 500 14px/1.43 Rubik;
+  gap: 2px;
   justify-content: center;
+  min-height: 28px;
+  padding-block: 2px;
+  padding-inline: 8px;
+}
+
+:host .text {
+  padding-inline: 2px;
 }
 
 :host.shape-rectangle {
@@ -12,27 +21,6 @@
 
 :host.shape-round {
   border-radius: 999px;
-}
-
-:host.size-small {
-  font: normal 500 12px/1.5 Rubik;
-  min-height: 24px;
-  padding-block: 2px;
-  padding-inline: 8px;
-}
-
-:host.size-medium {
-  font: normal 500 14px/1.43 Rubik;
-  min-height: 28px;
-  padding-block: 4px;
-  padding-inline: 10px;
-}
-
-:host.size-large {
-  font: normal 500 14px/1.43 Rubik;
-  min-height: 32px;
-  padding-block: 4px;
-  padding-inline: 12px;
 }
 
 :host.kind-gray {
@@ -57,4 +45,9 @@
   background-color: #dcf3e2;
   border-color: #b0ebc8;
   color: #48ba7c;
+}
+
+:host /deep/ qai-icon {
+  height: 12px;
+  width: 12px;
 }
