@@ -1,16 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/angular';
-import { QaiButton, QaiButtonKinds, QaiButtonSizes } from './qai-button';
+import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { argsToAttributes } from '../../../.storybook/utilities';
+import { QaiButton, QaiButtonKinds, QaiButtonSizes } from './qai-button';
+import { QaiIcon, QaiIconKinds, type QaiIconKind } from '../qai-icon';
 
-type QaiButtonStory = QaiButton & { content: string };
+type QaiButtonStory = QaiButton & { content: string; startIcon?: QaiIconKind };
 
 const meta: Meta<QaiButtonStory> = {
   component: QaiButton,
+  subcomponents: { QaiIcon },
   tags: ['autodocs'],
   argTypes: {
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },
     size: { options: QaiButtonSizes, control: { type: 'radio' } },
+    startIcon: { options: QaiIconKinds, control: { type: 'select' } },
   },
+  decorators: [moduleMetadata({ imports: [QaiIcon] })],
   parameters: {
     design: {
       type: 'figma',
@@ -19,11 +23,12 @@ const meta: Meta<QaiButtonStory> = {
   },
 
   // custom render to allow content projection
-  render: ({ content, ...args }) => ({
+  render: ({ content, startIcon, ...args }) => ({
     props: args,
-    template: `<button qai-button ${argsToAttributes(
-      args
-    )}>${content}</button>`,
+    template: `<button qai-button ${argsToAttributes(args)}>
+    ${startIcon ? `<qai-icon kind="${startIcon}" />` : ''}
+    ${content}
+    </button>`,
   }),
 };
 
@@ -48,5 +53,14 @@ export const Disabled: Story = {
     size: 'medium',
     disabled: true,
     content: 'Disabled',
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    kind: 'primary',
+    size: 'medium',
+    content: 'Icon',
+    startIcon: 'arrow-left',
   },
 };

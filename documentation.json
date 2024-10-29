@@ -8,12 +8,12 @@
     "directives": [
         {
             "name": "QaiButtonBase",
-            "id": "directive-QaiButtonBase-7bdcef9e8857adee2beb3c631f5f4bd62aa6ec9d3c57274b3d5cb3b232c686e2cd538b0a92f6863c308cffcc76c29922dd5afef116e7e4662fc8e9d5b70d623b",
+            "id": "directive-QaiButtonBase-e36c803eb340e868a9cc8297b2b4e2c3eff0950444cbc850d52f2755b25fb9d631efcd986bde775383e35ab43686700a6e0650be28dc85ccb59b3310e036a4c1",
             "file": "src/components/qai-button/qai-button.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import {\n  booleanAttribute,\n  Component,\n  Directive,\n  HostBinding,\n  Input,\n} from '@angular/core';\n\nexport const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];\nexport type QaiButtonKind = (typeof QaiButtonKinds)[number];\n\nexport const QaiButtonSizes = ['small', 'medium', 'large'];\nexport type QaiButtonSize = (typeof QaiButtonSizes)[number];\n\n@Directive()\nclass QaiButtonBase {\n  @Input({ required: true }) kind!: QaiButtonKind;\n  @Input({ required: true }) size!: QaiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n/**\n * Use this component by adding the `[qai-button]` attribute\n *  on any button element.\n *\n * Using an attribute instead of a custom element allows direct access\n *  to the native underlying element.\n */\n@Component({\n  exportAs: 'qaiButton',\n  host: {\n    '[disabled]': 'disabled',\n  },\n  selector: 'button[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButton extends QaiButtonBase {\n  @Input({ transform: booleanAttribute }) disabled? = false;\n}\n\n@Component({\n  exportAs: 'uiButtonAnchor',\n  selector: 'a[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButtonAnchor extends QaiButtonBase {}\n",
+            "sourceCode": "import {\n  booleanAttribute,\n  Component,\n  Directive,\n  HostBinding,\n  Input,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { QaiIcon } from '../qai-icon';\n\nexport const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];\nexport type QaiButtonKind = (typeof QaiButtonKinds)[number];\n\nexport const QaiButtonSizes = ['small', 'medium', 'large'];\nexport type QaiButtonSize = (typeof QaiButtonSizes)[number];\n\n@Directive()\nclass QaiButtonBase {\n  @Input({ required: true }) kind!: QaiButtonKind;\n  @Input({ required: true }) size!: QaiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n/**\n * Use this component by adding the `[qai-button]` attribute\n *  on any button element.\n *\n * Using an attribute instead of a custom element allows direct access\n *  to the native underlying element.\n */\n@Component({\n  encapsulation: ViewEncapsulation.None,\n  exportAs: 'qaiButton',\n  imports: [QaiIcon],\n  host: {\n    '[disabled]': 'disabled',\n  },\n  selector: 'button[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButton extends QaiButtonBase {\n  @Input({ transform: booleanAttribute }) disabled? = false;\n}\n\n@Component({\n  exportAs: 'uiButtonAnchor',\n  selector: 'a[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButtonAnchor extends QaiButtonBase {}\n",
             "providers": [],
             "hostDirectives": [],
             "standalone": false,
@@ -24,7 +24,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 17,
+                    "line": 19,
                     "type": "QaiButtonKind",
                     "decorators": []
                 },
@@ -34,7 +34,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 18,
+                    "line": 20,
                     "type": "QaiButtonSize",
                     "decorators": []
                 }
@@ -47,7 +47,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 23,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": []
                 }
@@ -63,7 +63,7 @@
                         "name": "cssClass",
                         "type": "",
                         "returnType": "",
-                        "line": 21
+                        "line": 23
                     }
                 }
             }
@@ -239,9 +239,11 @@
         },
         {
             "name": "QaiButton",
-            "id": "component-QaiButton-7bdcef9e8857adee2beb3c631f5f4bd62aa6ec9d3c57274b3d5cb3b232c686e2cd538b0a92f6863c308cffcc76c29922dd5afef116e7e4662fc8e9d5b70d623b",
+            "id": "component-QaiButton-e36c803eb340e868a9cc8297b2b4e2c3eff0950444cbc850d52f2755b25fb9d631efcd986bde775383e35ab43686700a6e0650be28dc85ccb59b3310e036a4c1",
             "file": "src/components/qai-button/qai-button.ts",
-            "encapsulation": [],
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
             "entryComponents": [],
             "exportAs": "qaiButton",
             "host": {},
@@ -265,7 +267,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 47,
+                    "line": 51,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -275,7 +277,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 17,
+                    "line": 19,
                     "type": "QaiButtonKind",
                     "decorators": [],
                     "inheritance": {
@@ -288,7 +290,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 18,
+                    "line": 20,
                     "type": "QaiButtonSize",
                     "decorators": [],
                     "inheritance": {
@@ -306,7 +308,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 23,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": [],
                     "inheritance": {
@@ -316,15 +318,19 @@
             ],
             "hostListeners": [],
             "standalone": true,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "QaiIcon"
+                }
+            ],
             "description": "<p>Use this component by adding the <code>[qai-button]</code> attribute\n on any button element.</p>\n<p>Using an attribute instead of a custom element allows direct access\n to the native underlying element.</p>\n",
             "rawdescription": "\n\nUse this component by adding the `[qai-button]` attribute\n on any button element.\n\nUsing an attribute instead of a custom element allows direct access\n to the native underlying element.\n",
             "type": "component",
-            "sourceCode": "import {\n  booleanAttribute,\n  Component,\n  Directive,\n  HostBinding,\n  Input,\n} from '@angular/core';\n\nexport const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];\nexport type QaiButtonKind = (typeof QaiButtonKinds)[number];\n\nexport const QaiButtonSizes = ['small', 'medium', 'large'];\nexport type QaiButtonSize = (typeof QaiButtonSizes)[number];\n\n@Directive()\nclass QaiButtonBase {\n  @Input({ required: true }) kind!: QaiButtonKind;\n  @Input({ required: true }) size!: QaiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n/**\n * Use this component by adding the `[qai-button]` attribute\n *  on any button element.\n *\n * Using an attribute instead of a custom element allows direct access\n *  to the native underlying element.\n */\n@Component({\n  exportAs: 'qaiButton',\n  host: {\n    '[disabled]': 'disabled',\n  },\n  selector: 'button[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButton extends QaiButtonBase {\n  @Input({ transform: booleanAttribute }) disabled? = false;\n}\n\n@Component({\n  exportAs: 'uiButtonAnchor',\n  selector: 'a[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButtonAnchor extends QaiButtonBase {}\n",
+            "sourceCode": "import {\n  booleanAttribute,\n  Component,\n  Directive,\n  HostBinding,\n  Input,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { QaiIcon } from '../qai-icon';\n\nexport const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];\nexport type QaiButtonKind = (typeof QaiButtonKinds)[number];\n\nexport const QaiButtonSizes = ['small', 'medium', 'large'];\nexport type QaiButtonSize = (typeof QaiButtonSizes)[number];\n\n@Directive()\nclass QaiButtonBase {\n  @Input({ required: true }) kind!: QaiButtonKind;\n  @Input({ required: true }) size!: QaiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n/**\n * Use this component by adding the `[qai-button]` attribute\n *  on any button element.\n *\n * Using an attribute instead of a custom element allows direct access\n *  to the native underlying element.\n */\n@Component({\n  encapsulation: ViewEncapsulation.None,\n  exportAs: 'qaiButton',\n  imports: [QaiIcon],\n  host: {\n    '[disabled]': 'disabled',\n  },\n  selector: 'button[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButton extends QaiButtonBase {\n  @Input({ transform: booleanAttribute }) disabled? = false;\n}\n\n@Component({\n  exportAs: 'uiButtonAnchor',\n  selector: 'a[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButtonAnchor extends QaiButtonBase {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  align-items: center;\n  background-color: var(--button-background-color-default);\n  border: none;\n  border-color: var(--button-border-color-default);\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 999px;\n  box-sizing: border-box;\n  color: var(--button-text-color-default);\n  display: inline-flex;\n  gap: 4px;\n  line-height: 1.5;\n  margin: 0;\n  padding-block: 8px;\n  padding-inline: 16px;\n  text-decoration: none;\n  transition-property: background-color;\n  transition-duration: 200ms;\n  transition-timing-function: ease-out;\n}\n\n:host::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\n\n@media (hover: hover) {\n  :host:enabled:hover,\n  :host:any-link:hover {\n    background-color: var(--button-background-color-hover);\n    cursor: pointer;\n  }\n}\n\n:host:disabled {\n  cursor: not-allowed;\n  opacity: 0.6;\n}\n\n:host.kind-primary {\n  --button-background-color-default: #027b8c;\n  --button-background-color-hover: #016f83;\n  --button-border-color-default: transparent;\n  --button-text-color-default: #ffffff;\n}\n\n:host.kind-secondary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #f9fafb;\n  --button-border-color-default: #d0d5dd;\n  --button-text-color-default: #344054;\n}\n\n:host.kind-tertiary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #d7eaec;\n  --button-border-color-default: #87c0c8;\n  --button-text-color-default: #016f83;\n}\n\n:host.size-small {\n  font: normal 600 14px/1.43 Rubik;\n  min-height: 36px;\n  padding-block: 8px;\n  padding-inline: 12px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 40px;\n  padding-block: 10px;\n  padding-inline: 14px;\n}\n\n:host.size-large {\n  font: normal 500 16px/1.5 Rubik;\n  min-height: 44px;\n  padding-block: 12px;\n  padding-inline: 16px;\n}\n",
+                    "data": ":host {\n  align-items: center;\n  background-color: var(--button-background-color-default);\n  border: none;\n  border-color: var(--button-border-color-default);\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 999px;\n  box-sizing: border-box;\n  color: var(--button-text-color-default);\n  display: inline-flex;\n  gap: 4px;\n  margin: 0;\n  padding-block: 8px;\n  padding-inline: 16px;\n  text-decoration: none;\n  transition-property: background-color;\n  transition-duration: 200ms;\n  transition-timing-function: ease-out;\n}\n\n:host::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\n\n@media (hover: hover) {\n  :host:enabled:hover,\n  :host:any-link:hover {\n    background-color: var(--button-background-color-hover);\n    cursor: pointer;\n  }\n}\n\n:host:disabled {\n  cursor: not-allowed;\n  opacity: 0.6;\n}\n\n:host.kind-primary {\n  --button-background-color-default: #027b8c;\n  --button-background-color-hover: #016f83;\n  --button-border-color-default: transparent;\n  --button-text-color-default: #ffffff;\n}\n\n:host.kind-secondary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #f9fafb;\n  --button-border-color-default: #d0d5dd;\n  --button-text-color-default: #344054;\n}\n\n:host.kind-tertiary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #d7eaec;\n  --button-border-color-default: #87c0c8;\n  --button-text-color-default: #016f83;\n}\n\n:host.size-small {\n  font: normal 600 14px/1.43 Rubik;\n  min-height: 36px;\n  padding-block: 8px;\n  padding-inline: 12px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 40px;\n  padding-block: 10px;\n  padding-inline: 14px;\n}\n\n:host.size-large {\n  font: normal 500 16px/1.5 Rubik;\n  min-height: 44px;\n  padding-block: 12px;\n  padding-inline: 16px;\n}\n\n:host .text {\n  padding-inline: 2px;\n}\n\n:host /deep/ qai-icon {\n  height: 20px;\n  width: 20px;\n}\n",
                     "styleUrl": "./qai-button.css"
                 }
             ],
@@ -332,11 +338,11 @@
             "extends": [
                 "QaiButtonBase"
             ],
-            "templateData": "<ng-content />\n"
+            "templateData": "<ng-content select=\"qai-icon\" />\n<span class=\"text\"><ng-content /></span>\n\n"
         },
         {
             "name": "QaiButtonAnchor",
-            "id": "component-QaiButtonAnchor-7bdcef9e8857adee2beb3c631f5f4bd62aa6ec9d3c57274b3d5cb3b232c686e2cd538b0a92f6863c308cffcc76c29922dd5afef116e7e4662fc8e9d5b70d623b",
+            "id": "component-QaiButtonAnchor-e36c803eb340e868a9cc8297b2b4e2c3eff0950444cbc850d52f2755b25fb9d631efcd986bde775383e35ab43686700a6e0650be28dc85ccb59b3310e036a4c1",
             "file": "src/components/qai-button/qai-button.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -361,7 +367,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 17,
+                    "line": 19,
                     "type": "QaiButtonKind",
                     "decorators": [],
                     "inheritance": {
@@ -374,7 +380,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 18,
+                    "line": 20,
                     "type": "QaiButtonSize",
                     "decorators": [],
                     "inheritance": {
@@ -392,7 +398,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 23,
                     "type": "{ [x: string]: boolean; }",
                     "decorators": [],
                     "inheritance": {
@@ -406,11 +412,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  booleanAttribute,\n  Component,\n  Directive,\n  HostBinding,\n  Input,\n} from '@angular/core';\n\nexport const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];\nexport type QaiButtonKind = (typeof QaiButtonKinds)[number];\n\nexport const QaiButtonSizes = ['small', 'medium', 'large'];\nexport type QaiButtonSize = (typeof QaiButtonSizes)[number];\n\n@Directive()\nclass QaiButtonBase {\n  @Input({ required: true }) kind!: QaiButtonKind;\n  @Input({ required: true }) size!: QaiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n/**\n * Use this component by adding the `[qai-button]` attribute\n *  on any button element.\n *\n * Using an attribute instead of a custom element allows direct access\n *  to the native underlying element.\n */\n@Component({\n  exportAs: 'qaiButton',\n  host: {\n    '[disabled]': 'disabled',\n  },\n  selector: 'button[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButton extends QaiButtonBase {\n  @Input({ transform: booleanAttribute }) disabled? = false;\n}\n\n@Component({\n  exportAs: 'uiButtonAnchor',\n  selector: 'a[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButtonAnchor extends QaiButtonBase {}\n",
+            "sourceCode": "import {\n  booleanAttribute,\n  Component,\n  Directive,\n  HostBinding,\n  Input,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { QaiIcon } from '../qai-icon';\n\nexport const QaiButtonKinds = ['primary', 'secondary', 'tertiary'];\nexport type QaiButtonKind = (typeof QaiButtonKinds)[number];\n\nexport const QaiButtonSizes = ['small', 'medium', 'large'];\nexport type QaiButtonSize = (typeof QaiButtonSizes)[number];\n\n@Directive()\nclass QaiButtonBase {\n  @Input({ required: true }) kind!: QaiButtonKind;\n  @Input({ required: true }) size!: QaiButtonSize;\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n      [`size-${this.size}`]: !!this.size,\n    };\n  }\n}\n\n/**\n * Use this component by adding the `[qai-button]` attribute\n *  on any button element.\n *\n * Using an attribute instead of a custom element allows direct access\n *  to the native underlying element.\n */\n@Component({\n  encapsulation: ViewEncapsulation.None,\n  exportAs: 'qaiButton',\n  imports: [QaiIcon],\n  host: {\n    '[disabled]': 'disabled',\n  },\n  selector: 'button[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButton extends QaiButtonBase {\n  @Input({ transform: booleanAttribute }) disabled? = false;\n}\n\n@Component({\n  exportAs: 'uiButtonAnchor',\n  selector: 'a[qai-button]',\n  standalone: true,\n  styleUrls: ['./qai-button.css'],\n  templateUrl: './qai-button.html',\n})\nexport class QaiButtonAnchor extends QaiButtonBase {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  align-items: center;\n  background-color: var(--button-background-color-default);\n  border: none;\n  border-color: var(--button-border-color-default);\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 999px;\n  box-sizing: border-box;\n  color: var(--button-text-color-default);\n  display: inline-flex;\n  gap: 4px;\n  line-height: 1.5;\n  margin: 0;\n  padding-block: 8px;\n  padding-inline: 16px;\n  text-decoration: none;\n  transition-property: background-color;\n  transition-duration: 200ms;\n  transition-timing-function: ease-out;\n}\n\n:host::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\n\n@media (hover: hover) {\n  :host:enabled:hover,\n  :host:any-link:hover {\n    background-color: var(--button-background-color-hover);\n    cursor: pointer;\n  }\n}\n\n:host:disabled {\n  cursor: not-allowed;\n  opacity: 0.6;\n}\n\n:host.kind-primary {\n  --button-background-color-default: #027b8c;\n  --button-background-color-hover: #016f83;\n  --button-border-color-default: transparent;\n  --button-text-color-default: #ffffff;\n}\n\n:host.kind-secondary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #f9fafb;\n  --button-border-color-default: #d0d5dd;\n  --button-text-color-default: #344054;\n}\n\n:host.kind-tertiary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #d7eaec;\n  --button-border-color-default: #87c0c8;\n  --button-text-color-default: #016f83;\n}\n\n:host.size-small {\n  font: normal 600 14px/1.43 Rubik;\n  min-height: 36px;\n  padding-block: 8px;\n  padding-inline: 12px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 40px;\n  padding-block: 10px;\n  padding-inline: 14px;\n}\n\n:host.size-large {\n  font: normal 500 16px/1.5 Rubik;\n  min-height: 44px;\n  padding-block: 12px;\n  padding-inline: 16px;\n}\n",
+                    "data": ":host {\n  align-items: center;\n  background-color: var(--button-background-color-default);\n  border: none;\n  border-color: var(--button-border-color-default);\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 999px;\n  box-sizing: border-box;\n  color: var(--button-text-color-default);\n  display: inline-flex;\n  gap: 4px;\n  margin: 0;\n  padding-block: 8px;\n  padding-inline: 16px;\n  text-decoration: none;\n  transition-property: background-color;\n  transition-duration: 200ms;\n  transition-timing-function: ease-out;\n}\n\n:host::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\n\n@media (hover: hover) {\n  :host:enabled:hover,\n  :host:any-link:hover {\n    background-color: var(--button-background-color-hover);\n    cursor: pointer;\n  }\n}\n\n:host:disabled {\n  cursor: not-allowed;\n  opacity: 0.6;\n}\n\n:host.kind-primary {\n  --button-background-color-default: #027b8c;\n  --button-background-color-hover: #016f83;\n  --button-border-color-default: transparent;\n  --button-text-color-default: #ffffff;\n}\n\n:host.kind-secondary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #f9fafb;\n  --button-border-color-default: #d0d5dd;\n  --button-text-color-default: #344054;\n}\n\n:host.kind-tertiary {\n  --button-background-color-default: #ffffff;\n  --button-background-color-hover: #d7eaec;\n  --button-border-color-default: #87c0c8;\n  --button-text-color-default: #016f83;\n}\n\n:host.size-small {\n  font: normal 600 14px/1.43 Rubik;\n  min-height: 36px;\n  padding-block: 8px;\n  padding-inline: 12px;\n}\n\n:host.size-medium {\n  font: normal 500 14px/1.43 Rubik;\n  min-height: 40px;\n  padding-block: 10px;\n  padding-inline: 14px;\n}\n\n:host.size-large {\n  font: normal 500 16px/1.5 Rubik;\n  min-height: 44px;\n  padding-block: 12px;\n  padding-inline: 16px;\n}\n\n:host .text {\n  padding-inline: 2px;\n}\n\n:host /deep/ qai-icon {\n  height: 20px;\n  width: 20px;\n}\n",
                     "styleUrl": "./qai-button.css"
                 }
             ],
@@ -418,7 +424,7 @@
             "extends": [
                 "QaiButtonBase"
             ],
-            "templateData": "<ng-content />\n"
+            "templateData": "<ng-content select=\"qai-icon\" />\n<span class=\"text\"><ng-content /></span>\n\n"
         },
         {
             "name": "QaiHeading",
@@ -496,11 +502,12 @@
         },
         {
             "name": "QaiIcon",
-            "id": "component-QaiIcon-dae795ee24a2aa55df56edff33d83e8ebfb7c47586f21a51188be4e91564a0f516071a60c9681900b27b6f2e0ef81e0d2afa717ba3d9a811de87f94a20395436",
+            "id": "component-QaiIcon-b6b6d598413c88c946992588e7c6c7a5504bf19a252da2a3b8b5a8c557006335cc8b9d88a2d7233a3aa591054569a13682ce55d17201ddcdf83bd84b6b3c9f82",
             "file": "src/components/qai-icon/qai-icon.ts",
             "encapsulation": [],
             "entryComponents": [],
             "exportAs": "qaiIcon",
+            "host": {},
             "inputs": [],
             "outputs": [],
             "providers": [],
@@ -509,7 +516,7 @@
                 "./qai-icon.css"
             ],
             "styles": [],
-            "template": "<span [innerHTML]=\"svg\" [style.height]=\"size\" [style.width]=\"size\">  </span>",
+            "template": "",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -520,7 +527,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "optional": false,
-                    "line": 22,
+                    "line": 26,
                     "type": "QaiIconKind",
                     "decorators": []
                 },
@@ -533,7 +540,7 @@
                     "optional": false,
                     "rawdescription": "\nAny valid CSS size value.",
                     "description": "<p>Any valid CSS size value.</p>\n",
-                    "line": 25,
+                    "line": 29,
                     "type": "string",
                     "decorators": []
                 }
@@ -543,27 +550,18 @@
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
-            "hostBindings": [
-                {
-                    "name": "class",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 35,
-                    "type": "{ [x: string]: boolean; }",
-                    "decorators": []
-                }
-            ],
+            "hostBindings": [],
             "hostListeners": [],
             "standalone": true,
             "imports": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, HostBinding, Input } from '@angular/core';\nimport { DomSanitizer, type SafeHtml } from '@angular/platform-browser';\n\nimport { svgIconStore } from '../../foundations/icons/svgIconStore';\n\nexport const QaiIconKinds = Object.keys(svgIconStore);\nexport type QaiIconKind = keyof typeof svgIconStore;\n\nconst getSvgForName = (name: QaiIconKind): string => {\n  return svgIconStore[name];\n};\n\n@Component({\n  exportAs: 'qaiIcon',\n  selector: 'qai-icon',\n  standalone: true,\n  styleUrls: ['./qai-icon.css'],\n  template: `<span [innerHTML]=\"svg\" [style.height]=\"size\" [style.width]=\"size\">\n  </span>`,\n})\nexport class QaiIcon {\n  @Input({ required: true }) kind!: QaiIconKind;\n\n  /** Any valid CSS size value. */\n  @Input({ required: true }) size = '24px';\n\n  protected get svg(): SafeHtml {\n    const svgContent = getSvgForName(this.kind);\n    return this.sanitizer.bypassSecurityTrustHtml(svgContent);\n  }\n\n  constructor(private sanitizer: DomSanitizer) {}\n\n  @HostBinding('class')\n  get cssClass() {\n    return {\n      [`kind-${this.kind}`]: !!this.kind,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { DomSanitizer, type SafeHtml } from '@angular/platform-browser';\n\nimport { svgIconStore } from '../../foundations/icons/svgIconStore';\n\nexport const QaiIconKinds = Object.keys(svgIconStore);\nexport type QaiIconKind = keyof typeof svgIconStore;\n\nconst getSvgForName = (name: QaiIconKind): string => {\n  return svgIconStore[name];\n};\n\n@Component({\n  exportAs: 'qaiIcon',\n  host: {\n    '[innerHTML]': 'svg',\n    '[style.height]': 'size',\n    '[style.width]': 'size',\n  },\n  selector: 'qai-icon',\n  standalone: true,\n  styleUrls: ['./qai-icon.css'],\n  template: '',\n})\nexport class QaiIcon {\n  @Input({ required: true }) kind!: QaiIconKind;\n\n  /** Any valid CSS size value. */\n  @Input({ required: true }) size = '24px';\n\n  protected get svg(): SafeHtml {\n    const svgContent = getSvgForName(this.kind);\n    return this.sanitizer.bypassSecurityTrustHtml(svgContent);\n  }\n\n  constructor(private sanitizer: DomSanitizer) {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n}\n",
+                    "data": ":host {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n}\n\n:host /deep/ svg {\n  fill: currentColor;\n}\n",
                     "styleUrl": "./qai-icon.css"
                 }
             ],
@@ -581,7 +579,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 30,
+                "line": 34,
                 "jsdoctags": [
                     {
                         "name": "sanitizer",
@@ -602,16 +600,7 @@
                         "name": "svg",
                         "type": "",
                         "returnType": "SafeHtml",
-                        "line": 27
-                    }
-                },
-                "cssClass": {
-                    "name": "cssClass",
-                    "getSignature": {
-                        "name": "cssClass",
-                        "type": "",
-                        "returnType": "",
-                        "line": 35
+                        "line": 31
                     }
                 }
             }
@@ -1450,8 +1439,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "QaiIcon",
-                "coveragePercent": 20,
-                "coverageCount": "1/5",
+                "coveragePercent": 25,
+                "coverageCount": "1/4",
                 "status": "low"
             },
             {

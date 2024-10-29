@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DomSanitizer, type SafeHtml } from '@angular/platform-browser';
 
 import { svgIconStore } from '../../foundations/icons/svgIconStore';
@@ -12,17 +12,21 @@ const getSvgForName = (name: QaiIconKind): string => {
 
 @Component({
   exportAs: 'qaiIcon',
+  host: {
+    '[innerHTML]': 'svg',
+    '[style.height]': 'size',
+    '[style.width]': 'size',
+  },
   selector: 'qai-icon',
   standalone: true,
   styleUrls: ['./qai-icon.css'],
-  template: `<span [innerHTML]="svg" [style.height]="size" [style.width]="size">
-  </span>`,
+  template: '',
 })
 export class QaiIcon {
   @Input({ required: true }) kind!: QaiIconKind;
 
   /** Any valid CSS size value. */
-  @Input({ required: true }) size = '24px';
+  @Input({ required: true }) size!: string;
 
   protected get svg(): SafeHtml {
     const svgContent = getSvgForName(this.kind);
@@ -30,11 +34,4 @@ export class QaiIcon {
   }
 
   constructor(private sanitizer: DomSanitizer) {}
-
-  @HostBinding('class')
-  get cssClass() {
-    return {
-      [`kind-${this.kind}`]: !!this.kind,
-    };
-  }
 }

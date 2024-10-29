@@ -10,7 +10,6 @@
   color: var(--button-text-color-default);
   display: inline-flex;
   gap: 4px;
-  line-height: 1.5;
   margin: 0;
   padding-block: 8px;
   padding-inline: 16px;
@@ -62,20 +61,29 @@
 :host.size-small {
   font: normal 600 14px/1.43 Rubik;
   min-height: 36px;
-  padding-block: 8px;
+  padding-block: 4px;
   padding-inline: 12px;
 }
 
 :host.size-medium {
   font: normal 500 14px/1.43 Rubik;
   min-height: 40px;
-  padding-block: 10px;
+  padding-block: 8px;
   padding-inline: 14px;
 }
 
 :host.size-large {
   font: normal 500 16px/1.5 Rubik;
   min-height: 44px;
-  padding-block: 12px;
+  padding-block: 8px;
   padding-inline: 16px;
+}
+
+:host .text {
+  padding-inline: 2px;
+}
+
+:host /deep/ qai-icon {
+  height: 20px;
+  width: 20px;
 }
