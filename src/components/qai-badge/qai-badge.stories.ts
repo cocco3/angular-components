@@ -31,10 +31,12 @@ const meta: Meta<QaiBadgeStory> = {
   // custom render to allow content projection
   render: ({ startIcon, endIcon, ...args }) => ({
     props: args,
-    template: `<qai-badge ${argsToAttributes(args)}>
-    ${startIcon ? `<qai-icon kind="${startIcon}" positionStart />` : ''}
-    ${endIcon ? `<qai-icon kind="${endIcon}" positionEnd />` : ''}
-    </qai-badge>`,
+    template: `
+      <qai-badge ${argsToAttributes(args)}>
+        ${startIcon ? `<qai-icon kind="${startIcon}" positionStart />` : ''}
+        ${endIcon ? `<qai-icon kind="${endIcon}" positionEnd />` : ''}
+      </qai-badge>
+    `,
   }),
 };
 

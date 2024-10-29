@@ -29,11 +29,13 @@ const meta: Meta<QaiButtonStory> = {
   // custom render to allow content projection
   render: ({ content, startIcon, endIcon, ...args }) => ({
     props: args,
-    template: `<button qai-button ${argsToAttributes(args)}>
-    ${startIcon ? `<qai-icon kind="${startIcon}" positionStart />` : ''}
-    ${content}
-    ${endIcon ? `<qai-icon kind="${endIcon}" positionEnd />` : ''}
-    </button>`,
+    template: `
+      <button qai-button ${argsToAttributes(args)}>
+        ${startIcon ? `<qai-icon kind="${startIcon}" positionStart />` : ''}
+        ${content}
+        ${endIcon ? `<qai-icon kind="${endIcon}" positionEnd />` : ''}
+      </button>
+    `,
   }),
 };
 

@@ -14,7 +14,11 @@ const meta: Meta<QaiHeadingStory> = {
   // custom render to allow content projection
   render: ({ content, ...args }) => ({
     props: args,
-    template: `<h1 qai-heading ${argsToAttributes(args)}>${content}</h1>`,
+    template: `
+      <h1 qai-heading ${argsToAttributes(args)}>
+        ${content}
+      </h1>
+    `,
   }),
 };
 
