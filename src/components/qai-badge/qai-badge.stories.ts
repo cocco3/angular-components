@@ -18,6 +18,12 @@ const meta: Meta<QaiBadge> = {
     shape: 'rectangle',
     size: 'medium',
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=1046-3819&node-type=frame&t=Vo6ryYVpPncwmEEa-0',
+    },
+  },
 };
 
 export default meta;

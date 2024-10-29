@@ -11,6 +11,12 @@ const meta: Meta<QaiButtonStory> = {
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },
     size: { options: QaiButtonSizes, control: { type: 'radio' } },
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=3287-427074&node-type=frame&t=Vo6ryYVpPncwmEEa-0',
+    },
+  },
 
   // custom render to allow content projection
   render: ({ content, ...args }) => ({

@@ -10,6 +10,12 @@ const meta: Meta<QaiIcon> = {
   args: {
     size: '24px',
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=13776-2148&node-type=section&t=Vo6ryYVpPncwmEEa-0',
+    },
+  },
 };
 
 export default meta;
