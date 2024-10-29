@@ -10,8 +10,8 @@
     "presb:dev": "npm run qai:build",
     "sb:dev": "ng run angular-components:storybook",
     "sb:build": "ng run angular-components:build-storybook",
-    "qai:build": "ts-node ./build/build.ts",
-    "svgo": "svgo"
+    "sb:serve": "npx http-server storybook-static",
+    "qai:build": "ts-node ./build/build.ts"
   },
   "private": true,
   "dependencies": {
