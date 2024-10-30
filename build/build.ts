@@ -1,7 +1,5 @@
-import { themeToCss } from './themeToCss';
-import { optimizeSvgIcons } from './optimizeSvgIcons';
-import { svgStore } from './svgStore';
+import { buildThemeCss } from './buildThemeCss';
+import { buildIcons } from './icons/buildIcons';
 
-themeToCss();
-optimizeSvgIcons();
-svgStore();
+buildThemeCss();
+buildIcons();

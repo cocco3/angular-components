@@ -1,16 +1,14 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { optimize, type Config } from 'svgo';
-import { readDirectory } from './readDirectory';
+import { type Icons } from './readDirForSvg';
 
-const ICONS_DIR = 'src/foundations/icons/svgs';
+const OUT_FILE_DIR = 'src/foundations/icons/svgs';
 
-export const optimizeSvgIcons = async () => {
-  const icons = readDirectory(ICONS_DIR, 'svg');
-
+export const optimizeSvgIcons = (icons: Icons) => {
   icons.forEach(({ name, svg }) => {
     const result = optimize(svg, SVGO_CONFIG);
-    const outFilePath = path.join(ICONS_DIR, `${name}.svg`);
+    const outFilePath = path.join(OUT_FILE_DIR, `${name}.svg`);
     fs.outputFileSync(outFilePath, result.data);
   });
 };

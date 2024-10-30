@@ -23,12 +23,12 @@ const transformToVariables = (theme: Theme, selector: string) => {
   return css;
 };
 
-export const themeToCss = () => {
+export const buildThemeCss = () => {
   fs.outputFileSync(
     OUT_FILE_PATH,
     `/*
  * Auto-generated on ${new Date().toDateString()}. Do not modify.
- * Update variables in ./src/tokens then run "qai:build" script.
+ * Update variables in ./src/tokens then run "buildThemeCss()" script.
  */\n`
   );
 
