@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
 
 <style>
+  /* Theme switcher */
+
   html.theme-light,
   html.theme-light .docs-story {
     background-color: #ffffff;
@@ -13,5 +15,62 @@
   html.theme-dark .docs-story {
     background-color: #0c111d;
     color: var(--text-primary);
+  }
+
+  /* Icons page */
+
+  .sb-iconGrid {
+    columns: 3;
+  }
+
+  .sb-iconGrid .item {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding-block: 12px;
+    padding-inline: 12px;
+  }
+
+  .sb-iconGrid .icon {
+    display: flex;
+    height: 24px;
+  }
+
+  /* Colors page */
+
+  .sb-colorSet {
+    display: grid;
+    gap: 24px;
+  }
+
+  .sb-colorSet .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+  }
+
+  .sb-colorItem {
+    background-color: var(--surface-primary);
+    border: 1px solid var(--border-primary-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .sb-colorItem .color {
+    height: 48px;
+  }
+
+  .sb-colorItem .info {
+    border-block-start: 1px solid var(--border-primary-subtle);
+    color: var(--text-primary);
+    font-family: var(--font-maison);
+    font-size: 12px;
+    line-height: 1.5;
+    padding-block: 8px;
+    padding-inline: 12px;
+  }
+
+  .sb-colorItem .hex {
+    color: var(--text-secondary);
   }
 </style>
