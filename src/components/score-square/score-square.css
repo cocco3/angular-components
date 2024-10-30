@@ -6,7 +6,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  font-family: Rubik;
+  font: var(--type-text-md);
   height: 200px;
   justify-content: center;
   padding-block: 24px;
@@ -32,7 +32,7 @@
 
 .title {
   color: var(--text-primary);
-  font: 700 var(--type-text-md);
+  font-weight: 700;
 }
 
 .score {
@@ -41,5 +41,5 @@
 
 .max {
   color: var(--text-tertiary);
-  font: 500 var(--type-text-md);
+  font-weight: 500;
 }
