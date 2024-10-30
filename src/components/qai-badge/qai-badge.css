@@ -48,7 +48,7 @@
   color: #48ba7c;
 }
 
-:host /deep/ qai-icon {
+:host ::ng-deep qai-icon {
   height: 12px;
   width: 12px;
 }

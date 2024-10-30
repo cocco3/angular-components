@@ -83,7 +83,7 @@
   padding-inline: 2px;
 }
 
-:host /deep/ qai-icon {
+:host ::ng-deep qai-icon {
   height: 20px;
   width: 20px;
 }

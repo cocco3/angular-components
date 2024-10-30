@@ -4,6 +4,6 @@
   justify-content: center;
 }
 
-:host /deep/ svg {
+:host ::ng-deep svg {
   fill: currentColor;
 }
