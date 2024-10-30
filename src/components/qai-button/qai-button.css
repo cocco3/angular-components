@@ -59,21 +59,21 @@
 }
 
 :host.size-small {
-  font: normal 600 14px/1.43 Rubik;
+  font: 600 var(--type-text-sm);
   min-height: 36px;
   padding-block: 4px;
   padding-inline: 12px;
 }
 
 :host.size-medium {
-  font: normal 500 14px/1.43 Rubik;
+  font: 600 var(--type-text-sm);
   min-height: 40px;
   padding-block: 8px;
   padding-inline: 14px;
 }
 
 :host.size-large {
-  font: normal 500 16px/1.5 Rubik;
+  font: 600 var(--type-text-md);
   min-height: 44px;
   padding-block: 8px;
   padding-inline: 16px;
