@@ -7,25 +7,35 @@ import { svgIconStore } from './svgIconStore'
 
 Icons sourced from [Untitled UI](https://www.untitledui.com/free-icons).
 
-<div style={{
-    columns: 3
-  }}
->
+<div class="container">
   {Object.entries(svgIconStore).map(([key, value]) => (
-    <div
-      style={{
-        alignItems: 'center',
-        display: 'flex',
-        gap: '8px',
-        paddingBlock: '12px',
-        paddingInline: '12px'
-      }}
-    >
+    <div class="item">
       <div
-        style={{ display: 'flex', height: '24px' }}
+        class="icon"
         dangerouslySetInnerHTML={{ __html: value }}
       />
       {key}
     </div>
   ))}
 </div>
+
+<style>
+  {`
+  .container {
+    columns: 3;
+  }
+
+  .item {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding-block: 12px;
+    padding-inline: 12px;
+  }
+
+  .icon {
+    display: flex;
+    height: 24px;
+  }
+  `}
+</style>
