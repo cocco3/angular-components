@@ -40,7 +40,7 @@ const SVGO_CONFIG: Config = {
     {
       name: 'removeAttrs',
       params: {
-        attrs: ['data-name', 'fill-rule', 'fill'],
+        attrs: ['data-name', 'fill', 'style'],
         preserveCurrentColor: false,
       },
     },

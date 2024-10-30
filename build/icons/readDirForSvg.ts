@@ -14,5 +14,6 @@ export const readDirForSvg = (src: string) => {
         name: path.basename(file, '.svg'),
         svg,
       };
-    });
+    })
+    .sort((a, b) => b.name.localeCompare(a.name));
 };
