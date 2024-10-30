@@ -8,3 +8,20 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+:root {
+  --font-family-rubik: Rubik, -apple-system, 'Helvetica Neue', sans-serif;
+
+  --type-display-2xl: 72px/1.25 var(--font-family-rubik);
+  --type-display-xl: 60px/1.2 var(--font-family-rubik);
+  --type-display-lg: 48px/1.25 var(--font-family-rubik);
+  --type-display-md: 36px/1.22 var(--font-family-rubik);
+  --type-display-sm: 30px/1.27 var(--font-family-rubik);
+  --type-display-xs: 24px/1.33 var(--font-family-rubik);
+
+  --type-text-xl: 20px/1.5 var(--font-family-rubik);
+  --type-text-lg: 18px/1.56 var(--font-family-rubik);
+  --type-text-md: 16px/1.5 var(--font-family-rubik);
+  --type-text-sm: 14px/1.43 var(--font-family-rubik);
+  --type-text-xs: 12px/1.5 var(--font-family-rubik);
+}

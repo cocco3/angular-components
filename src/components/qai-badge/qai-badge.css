@@ -2,8 +2,9 @@
   align-items: center;
   border-style: solid;
   border-width: 1px;
+  box-sizing: border-box;
   display: inline-flex;
-  font: normal 500 14px/1.43 Rubik;
+  font: 500 var(--type-text-sm);
   gap: 2px;
   justify-content: center;
   min-height: 28px;
