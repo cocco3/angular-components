@@ -43,11 +43,11 @@ export default meta;
 type Story = StoryObj<QaiButtonStory>;
 
 export const Primary: Story = {
-  args: { kind: 'primary', size: 'medium', content: 'Primary' },
+  args: { kind: 'primary', size: 'medium', content: 'Submit' },
 };
 
 export const Secondary: Story = {
-  args: { kind: 'secondary', size: 'medium', content: 'Secondary' },
+  args: { kind: 'secondary', size: 'medium', content: 'Cancel' },
 };
 
 export const Tertiary: Story = {
@@ -59,7 +59,7 @@ export const Disabled: Story = {
     kind: 'primary',
     size: 'medium',
     disabled: true,
-    content: 'Disabled',
+    content: 'Save',
   },
 };
 
@@ -67,7 +67,7 @@ export const StartIcon: Story = {
   args: {
     kind: 'primary',
     size: 'medium',
-    content: 'Icon',
+    content: 'Back',
     startIcon: 'arrow-left',
   },
 };
@@ -76,7 +76,7 @@ export const EndIcon: Story = {
   args: {
     kind: 'primary',
     size: 'medium',
-    content: 'Icon',
+    content: 'Next',
     endIcon: 'arrow-right',
   },
 };

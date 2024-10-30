@@ -45,25 +45,25 @@ export default meta;
 type Story = StoryObj<QaiBadgeStory>;
 
 export const Gray: Story = {
-  args: { kind: 'gray', label: 'Gray' },
+  args: { kind: 'gray', label: 'Incomplete' },
 };
 
 export const Red: Story = {
-  args: { kind: 'red', label: 'Red' },
+  args: { kind: 'red', label: 'Not Certified' },
 };
 
 export const Yellow: Story = {
-  args: { kind: 'yellow', label: 'Yellow' },
+  args: { kind: 'yellow', label: 'Due Soon' },
 };
 
 export const Green: Story = {
-  args: { kind: 'green', label: 'Green' },
+  args: { kind: 'green', label: 'Completed' },
 };
 
 export const StartIcon: Story = {
   args: {
-    kind: 'gray',
-    label: 'Icon',
+    kind: 'red',
+    label: 'Past due',
     startIcon: 'alert-triangle',
   },
 };
@@ -71,7 +71,7 @@ export const StartIcon: Story = {
 export const EndIcon: Story = {
   args: {
     kind: 'gray',
-    label: 'Icon',
-    endIcon: 'arrow-right',
+    label: 'Chip',
+    endIcon: 'x-close',
   },
 };
