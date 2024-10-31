@@ -12,8 +12,10 @@ export const primitiveColorsArray = [
 
 export const defaultThemeColorsArray = [
   { name: 'Text', id: 'text', colors: defaultTheme.text },
+  { name: 'Background', id: 'bg', colors: defaultTheme.background },
 ];
 
 export const darkThemeColorsArray = [
   { name: 'Text', id: 'text', colors: darkTheme.text },
+  { name: 'Background', id: 'bg', colors: darkTheme.background },
 ];
