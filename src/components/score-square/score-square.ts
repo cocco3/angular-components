@@ -8,7 +8,11 @@ export type ScoreSquareKind = (typeof ScoreSquareKinds)[number];
   selector: 'score-square',
   standalone: true,
   styleUrls: ['./score-square.css'],
-  templateUrl: './score-square.html',
+  template: `
+    <div class="title">Your Score</div>
+    <div class="score">{{ score }}</div>
+    <div class="max">Out of {{ max }}</div>
+  `,
 })
 export class ScoreSquare {
   @Input({ required: true }) score = 0;

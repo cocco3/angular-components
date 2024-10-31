@@ -1,4 +1,3 @@
-import { background } from 'storybook/internal/theming';
 import { primitives } from './primitive';
 
 const { base, gray, teal, red, yellow, green } = primitives;

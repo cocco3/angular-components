@@ -8,6 +8,9 @@ export type QaiBadgeShape = (typeof QaiBadgeShapes)[number];
 
 @Component({
   exportAs: 'qaiBadge',
+  host: {
+    class: 'theme-light',
+  },
   selector: 'qai-badge',
   standalone: true,
   styleUrls: ['./qai-badge.css'],

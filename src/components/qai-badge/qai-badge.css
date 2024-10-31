@@ -25,27 +25,27 @@
 }
 
 :host.kind-gray {
-  background-color: #f9fafb;
+  background-color: var(--bg-primary);
   border-color: #eaecf0;
-  color: #344054;
+  color: var(--text-secondary);
 }
 
 :host.kind-red {
-  background-color: #fef3f2;
+  background-color: var(--bg-error);
   border-color: #fecdca;
-  color: #b42318;
+  color: var(--text-error);
 }
 
 :host.kind-yellow {
-  background-color: #fffaeb;
+  background-color: var(--bg-warning);
   border-color: #fedf89;
-  color: #b54708;
+  color: var(--text-warning);
 }
 
 :host.kind-green {
-  background-color: #dcf3e2;
+  background-color: var(--bg-success);
   border-color: #b0ebc8;
-  color: #48ba7c;
+  color: var(--text-success);
 }
 
 :host ::ng-deep qai-icon {

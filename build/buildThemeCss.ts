@@ -14,7 +14,11 @@ const transformToVariables = (theme: Theme, selector: string) => {
     .map(([key, value]) => `  --text-${key}: ${value};`)
     .join('\n');
 
-  const contents = [textProperties].join('\n\n');
+  const bgProperties = Object.entries(theme.background)
+    .map(([key, value]) => `  --bg-${key}: ${value};`)
+    .join('\n');
+
+  const contents = [textProperties, bgProperties].join('\n\n');
 
   const css = template
     .replace('{{SELECTOR}}', selector)
