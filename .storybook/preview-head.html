@@ -36,7 +36,7 @@
     height: 24px;
   }
 
-  /* Primitive colors page */
+  /* Primitive color swatch */
 
   .docs-colorSwatch {
     display: grid;
@@ -44,61 +44,43 @@
     row-gap: 12px;
   }
 
-  .docs-colorSwatch .item {
-    background-color: #ffffff;
-    overflow: hidden;
-  }
+  /* Theme color set */
 
-  .docs-colorSwatch .color {
-    height: 48px;
-  }
-
-  .docs-colorSwatch .info {
-    font-size: 11px;
-    line-height: 1.43;
-    padding-block: 4px;
-    padding-inline: 8px;
-  }
-
-  .sb-colorItem .hex {
-    color: var(--text-secondary);
-  }
-
-  /* Theme colors page */
-
-  .sb-colorSet {
+  .docs-colorSet {
     display: grid;
-    gap: 24px;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 
-  .sb-colorSet .grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
-  }
-
-  .sb-colorItem {
-    background-color: var(--surface-primary);
-    border: 1px solid var(--border-primary-subtle);
+  .docs-colorSet .docs-colorItem {
+    border: 1px solid #eaecf0;
     border-radius: 8px;
     overflow: hidden;
   }
 
-  .sb-colorItem .color {
-    height: 48px;
+  /* Color palette item */
+
+  .docs-colorItem {
+    background-color: #ffffff;
+    overflow: hidden;
   }
 
-  .sb-colorItem .info {
-    border-block-start: 1px solid var(--border-primary-subtle);
+  .docs-colorItem .color {
+    height: 40px;
+  }
+
+  .docs-colorItem .info {
+    padding-block: 4px;
+    padding-inline: 8px;
+  }
+
+  .docs-colorItem .variable {
     color: var(--text-primary);
-    font-family: var(--font-maison);
-    font-size: 12px;
-    line-height: 1.5;
-    padding-block: 8px;
-    padding-inline: 12px;
+    font: 500 12px/1.43 Rubik;
   }
 
-  .sb-colorItem .hex {
-    color: var(--text-secondary);
+  .docs-colorItem .hex {
+    color: var(--text-tertiary);
+    font: 400 11px/1.43 Rubik;
   }
 </style>

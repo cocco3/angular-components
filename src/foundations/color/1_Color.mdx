@@ -2,7 +2,7 @@ import { Meta } from '@storybook/blocks';
 import { primitives } from './primitive'
 import { primitiveColorsArray } from './colorData'
 
-<Meta title="foundations/Color" />
+<Meta title="foundations/Color Primitives" />
 
 # Color Primitives
 
@@ -17,10 +17,10 @@ context-specific, and should not be used direclty in components.
         {Object.entries(item.colors).map(([weight, hex]) => {
           const variable = `${item.id}-${weight}`
           return (
-            <div class="item" key={variable}>
+            <div class="docs-colorItem" key={variable}>
               <div class="color" style={{ backgroundColor: hex }} />
               <div class="info">
-                <div>{variable}</div>
+                <div class="variable">{variable}</div>
                 <div class="hex">{hex}</div>
               </div>
             </div>

@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/blocks';
+import { darkThemeColorsArray } from './colorData'
+
+<Meta title="foundations/Dark Theme" />
+
+# Dark theme
+
+Color variables that are defined based on their intended use or meaning. They
+provide context and convey information, such as status, state, or action.
+
+<div>
+  {darkThemeColorsArray.map(item => (
+    <>
+      <h2>{item.name}</h2>
+      <div class="docs-colorSet sb-unstyled theme-light">
+        {Object.entries(item.colors).map(([weight, hex]) => {
+          const variable = `${item.id}-${weight}`
+          return (
+            <div class="docs-colorItem" key={variable}>
+              <div class="color" style={{ backgroundColor: hex }} />
+              <div class="info">
+                <div class="variable">{variable}</div>
+                <div class="hex">{hex}</div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </>
+  ))}
+</div>
