@@ -2,9 +2,9 @@ import { primitives } from './primitive';
 
 const { base, gray, teal, red, yellow, green } = primitives;
 
-export type Theme = typeof defaultTheme;
+export type Theme = typeof lightTheme;
 
-export const defaultTheme = {
+export const lightTheme = {
   text: {
     primary: gray['900'],
     secondary: gray['700'],
@@ -23,6 +23,15 @@ export const defaultTheme = {
     error: red['50'],
     warning: yellow['50'],
     success: green['50'],
+  },
+  border: {
+    primary: gray['300'],
+    secondary: gray['200'],
+    tertiary: gray['100'],
+    disabled: gray['300'],
+    error: red['300'],
+    warning: yellow['300'],
+    success: green['300'],
   },
 };
 
@@ -45,5 +54,14 @@ export const darkTheme: Theme = {
     error: red['500'],
     warning: yellow['500'],
     success: green['500'],
+  },
+  border: {
+    primary: gray['700'],
+    secondary: gray['800'],
+    tertiary: gray['800'],
+    disabled: gray['700'],
+    error: red['400'],
+    warning: yellow['400'],
+    success: green['400'],
   },
 };

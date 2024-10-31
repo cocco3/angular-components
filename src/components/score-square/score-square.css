@@ -15,7 +15,7 @@
 }
 
 :host.kind-pass {
-  border-color: #9ae6bb;
+  border-color: var(--border-success);
 }
 
 :host.kind-pass .score {
@@ -23,7 +23,7 @@
 }
 
 :host.kind-fail {
-  border-color: #fda29b;
+  border-color: var(--border-error);
 }
 
 :host.kind-fail .score {

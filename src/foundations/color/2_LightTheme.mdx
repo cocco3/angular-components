@@ -1,15 +1,18 @@
 import { Meta } from '@storybook/blocks';
-import { defaultThemeColorsArray } from './colorData'
+import { lightThemeColorsArray } from './colorData'
 
-<Meta title="foundations/Default Theme" />
+<Meta title="foundations/Light Theme" />
 
-# Default theme
+# Light theme
 
 Color variables that are defined based on their intended use or meaning. They
 provide context and convey information, such as status, state, or action.
 
+The light theme is the default theme. You can also opt into it by adding the
+`theme-light` class to any container.
+
 <div>
-  {defaultThemeColorsArray.map(item => (
+  {lightThemeColorsArray.map(item => (
     <>
       <h2>{item.name}</h2>
       <div class="docs-colorSet sb-unstyled theme-light">

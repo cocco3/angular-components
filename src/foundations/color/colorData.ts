@@ -1,5 +1,5 @@
 import { primitives } from './primitive';
-import { darkTheme, defaultTheme } from './theme';
+import { darkTheme, lightTheme } from './theme';
 
 export const primitiveColorsArray = [
   { name: 'Base', id: 'base', colors: primitives.base },
@@ -10,12 +10,14 @@ export const primitiveColorsArray = [
   { name: 'Yellow', id: 'yellow', colors: primitives.yellow },
 ];
 
-export const defaultThemeColorsArray = [
-  { name: 'Text', id: 'text', colors: defaultTheme.text },
-  { name: 'Background', id: 'bg', colors: defaultTheme.background },
+export const lightThemeColorsArray = [
+  { name: 'Text', id: 'text', colors: lightTheme.text },
+  { name: 'Background', id: 'bg', colors: lightTheme.background },
+  { name: 'Border', id: 'border', colors: lightTheme.border },
 ];
 
 export const darkThemeColorsArray = [
   { name: 'Text', id: 'text', colors: darkTheme.text },
   { name: 'Background', id: 'bg', colors: darkTheme.background },
+  { name: 'Border', id: 'border', colors: darkTheme.border },
 ];

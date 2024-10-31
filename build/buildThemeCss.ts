@@ -1,5 +1,5 @@
 import * as fs from 'fs-extra';
-import { darkTheme, defaultTheme, type Theme } from '../src/foundations';
+import { darkTheme, lightTheme, type Theme } from '../src/foundations';
 
 const OUT_FILE_PATH = './src/css/theme.css';
 
@@ -18,7 +18,13 @@ const transformToVariables = (theme: Theme, selector: string) => {
     .map(([key, value]) => `  --bg-${key}: ${value};`)
     .join('\n');
 
-  const contents = [textProperties, bgProperties].join('\n\n');
+  const borderProperties = Object.entries(theme.border)
+    .map(([key, value]) => `  --border-${key}: ${value};`)
+    .join('\n');
+
+  const contents = [textProperties, bgProperties, borderProperties].join(
+    '\n\n'
+  );
 
   const css = template
     .replace('{{SELECTOR}}', selector)
@@ -36,11 +42,8 @@ export const buildThemeCss = () => {
  */\n`
   );
 
-  const defaultThemeCss = transformToVariables(
-    defaultTheme,
-    ':root, .theme-light'
-  );
-  fs.appendFileSync(OUT_FILE_PATH, defaultThemeCss);
+  const lightThemeCss = transformToVariables(lightTheme, ':root, .theme-light');
+  fs.appendFileSync(OUT_FILE_PATH, lightThemeCss);
 
   const darkThemeCss = transformToVariables(darkTheme, '.theme-dark');
   fs.appendFileSync(OUT_FILE_PATH, darkThemeCss);
