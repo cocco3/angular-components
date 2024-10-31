@@ -1,0 +1,90 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+
+<style>
+  .sbdocs-content {
+    max-width: 1024px;
+  }
+
+  /* Theme switcher */
+
+  html.theme-light,
+  html.theme-light .docs-story {
+    background-color: #ffffff;
+    color: var(--text-primary);
+  }
+
+  html.theme-dark,
+  html.theme-dark .docs-story {
+    background-color: #0c111d;
+    color: var(--text-primary);
+  }
+
+  /* Icons page */
+
+  .sb-iconGrid {
+    columns: 3;
+  }
+
+  .sb-iconGrid .item {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding-block: 12px;
+    padding-inline: 12px;
+  }
+
+  .sb-iconGrid .icon {
+    display: flex;
+    height: 24px;
+  }
+
+  /* Color palette item */
+
+  .docs-colorItem {
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .docs-colorItem .color {
+    height: 40px;
+  }
+
+  .docs-colorItem .info {
+    padding-block: 4px;
+    padding-inline: 8px;
+  }
+
+  .docs-colorItem .variable {
+    color: var(--text-primary);
+    font: 500 12px/1.43 Rubik;
+  }
+
+  .docs-colorItem .hex {
+    color: var(--text-tertiary);
+    font: 400 11px/1.43 Rubik;
+  }
+
+  /* Primitive color swatch */
+
+  .docs-colorSwatch {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    row-gap: 12px;
+  }
+
+  /* Theme color set */
+
+  .docs-colorSet {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .docs-colorSet .docs-colorItem {
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+</style>

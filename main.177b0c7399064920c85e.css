@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/*
+ * Auto-generated on Thu Oct 31 2024. Do not modify.
+ * Update variables in ./src/tokens then run "buildThemeCss()" script.
+ */
+
+:root, .theme-light {
+  --text-primary: #101828;
+  --text-secondary: #344054;
+  --text-tertiary: #475467;
+  --text-disabled: #667085;
+  --text-placeholder: #667085;
+  --text-error: #d92d20;
+  --text-warning: #dc6803;
+  --text-success: #59da94;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f2f4f7;
+  --bg-disabled: #f2f4f7;
+  --bg-error: #fef3f2;
+  --bg-warning: #fffaeb;
+  --bg-success: #dcf3e2;
+
+  --border-primary: #d0d5dd;
+  --border-secondary: #eaecf0;
+  --border-tertiary: #f2f4f7;
+  --border-disabled: #d0d5dd;
+  --border-error: #fda29b;
+  --border-warning: #fec84b;
+  --border-success: #9ae6bb;
+}
+
+.theme-dark {
+  --text-primary: #f9fafb;
+  --text-secondary: #d0d5dd;
+  --text-tertiary: #98a2b3;
+  --text-disabled: #667085;
+  --text-placeholder: #98a2b3;
+  --text-error: #f97066;
+  --text-warning: #fdb022;
+  --text-success: #84e2ae;
+
+  --bg-primary: #0c111d;
+  --bg-secondary: #101828;
+  --bg-tertiary: #182230;
+  --bg-disabled: #182230;
+  --bg-error: #f04438;
+  --bg-warning: #f79009;
+  --bg-success: #6edea1;
+
+  --border-primary: #344054;
+  --border-secondary: #182230;
+  --border-tertiary: #182230;
+  --border-disabled: #344054;
+  --border-error: #f97066;
+  --border-warning: #fdb022;
+  --border-success: #84e2ae;
+}
+
+:root {
+  --font-family-rubik: Rubik, -apple-system, 'Helvetica Neue', sans-serif;
+
+  --type-display-2xl: 72px/1.25 var(--font-family-rubik);
+  --type-display-xl: 60px/1.2 var(--font-family-rubik);
+  --type-display-lg: 48px/1.25 var(--font-family-rubik);
+  --type-display-md: 36px/1.22 var(--font-family-rubik);
+  --type-display-sm: 30px/1.27 var(--font-family-rubik);
+  --type-display-xs: 24px/1.33 var(--font-family-rubik);
+
+  --type-text-xl: 20px/1.5 var(--font-family-rubik);
+  --type-text-lg: 18px/1.56 var(--font-family-rubik);
+  --type-text-md: 16px/1.5 var(--font-family-rubik);
+  --type-text-sm: 14px/1.43 var(--font-family-rubik);
+  --type-text-xs: 12px/1.5 var(--font-family-rubik);
+}
+
