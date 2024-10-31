@@ -36,7 +36,35 @@
     height: 24px;
   }
 
-  /* Colors page */
+  /* Primitive colors page */
+
+  .sb-colorSwatch {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    row-gap: 12px;
+  }
+
+  .sb-colorSwatch .item {
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .sb-colorSwatch .color {
+    height: 48px;
+  }
+
+  .sb-colorSwatch .info {
+    font-size: 11px;
+    line-height: 1.43;
+    padding-block: 4px;
+    padding-inline: 8px;
+  }
+
+  .sb-colorItem .hex {
+    color: var(--text-secondary);
+  }
+
+  /* Theme colors page */
 
   .sb-colorSet {
     display: grid;
