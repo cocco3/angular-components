@@ -1,5 +1,14 @@
 import * as fs from 'fs-extra';
-import { darkTheme, lightTheme, type Theme } from '../src/foundations';
+import {
+  lightThemeColorsArray,
+  darkThemeColorsArray,
+} from '../src/foundations';
+
+type ThemeData = {
+  name: string;
+  id: string;
+  colors: Record<string, string>;
+};
 
 const OUT_FILE_PATH = './src/css/theme.css';
 
@@ -9,28 +18,18 @@ const template = `
 }
 `;
 
-const transformToVariables = (theme: Theme, selector: string) => {
-  const textProperties = Object.entries(theme.text)
-    .map(([key, value]) => `  --text-${key}: ${value};`)
-    .join('\n');
+const transformToVariables = (theme: ThemeData[], selector: string) => {
+  const contents = theme
+    .map((item) =>
+      Object.entries(item.colors)
+        .map(([key, value]) => `  --${item.id}-${key}: ${value};`)
+        .join('\n')
+    )
+    .join('\n\n');
 
-  const bgProperties = Object.entries(theme.background)
-    .map(([key, value]) => `  --bg-${key}: ${value};`)
-    .join('\n');
-
-  const borderProperties = Object.entries(theme.border)
-    .map(([key, value]) => `  --border-${key}: ${value};`)
-    .join('\n');
-
-  const contents = [textProperties, bgProperties, borderProperties].join(
-    '\n\n'
-  );
-
-  const css = template
+  return template
     .replace('{{SELECTOR}}', selector)
     .replace('{{CONTENTS}}', contents);
-
-  return css;
 };
 
 export const buildThemeCss = () => {
@@ -42,9 +41,15 @@ export const buildThemeCss = () => {
  */\n`
   );
 
-  const lightThemeCss = transformToVariables(lightTheme, ':root, .theme-light');
+  const lightThemeCss = transformToVariables(
+    lightThemeColorsArray,
+    ':root, .theme-light'
+  );
   fs.appendFileSync(OUT_FILE_PATH, lightThemeCss);
 
-  const darkThemeCss = transformToVariables(darkTheme, '.theme-dark');
+  const darkThemeCss = transformToVariables(
+    darkThemeColorsArray,
+    '.theme-dark'
+  );
   fs.appendFileSync(OUT_FILE_PATH, darkThemeCss);
 };
