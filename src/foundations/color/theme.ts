@@ -1,3 +1,4 @@
+import { background } from 'storybook/internal/theming';
 import { primitives } from './primitive';
 
 const { gray, teal, red, yellow, green } = primitives;
@@ -15,6 +16,9 @@ export const defaultTheme = {
     warning: yellow['600'],
     success: green['600'],
   },
+  background: {
+    primary: '',
+  },
 };
 
 export const darkTheme: Theme = {
@@ -27,5 +31,8 @@ export const darkTheme: Theme = {
     error: red['400'],
     warning: yellow['400'],
     success: green['400'],
+  },
+  background: {
+    primary: '',
   },
 };

@@ -1,4 +1,8 @@
 export const primitives = {
+  base: {
+    white: '#ffffff',
+    black: '#000000',
+  },
   gray: {
     '25': '#fcfcfd',
     '50': '#f9fafb',
