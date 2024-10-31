@@ -11,6 +11,7 @@
     "sb:dev": "ng run angular-components:storybook",
     "sb:build": "ng run angular-components:build-storybook",
     "sb:serve": "npx http-server storybook-static",
+    "sb:publish": "ts-node ./build/publishStorybook.ts",
     "qai:build": "ts-node ./build/build.ts"
   },
   "private": true,
@@ -42,8 +43,10 @@
     "@storybook/blocks": "^8.3.6",
     "@storybook/test": "^8.3.6",
     "@types/fs-extra": "^11.0.4",
+    "@types/gh-pages": "^6.1.0",
     "@types/jasmine": "~5.1.0",
     "fs-extra": "^11.2.0",
+    "gh-pages": "^6.2.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
