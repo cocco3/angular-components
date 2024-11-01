@@ -11,7 +11,7 @@
     "sb:dev": "ng run angular-components:storybook",
     "sb:build": "ng run angular-components:build-storybook",
     "sb:serve": "npx http-server storybook-static",
-    "sb:publish": "ts-node ./build/publishStorybook.ts",
+    "sb:publish": "ts-node ./deploy/storybook.ts",
     "qai:build": "ts-node ./build/build.ts"
   },
   "private": true,
