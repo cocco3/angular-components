@@ -12,13 +12,13 @@ type QaiButtonStory = QaiButton & {
 const meta: Meta<QaiButtonStory> = {
   component: QaiButton,
   tags: ['autodocs'],
+  decorators: [moduleMetadata({ imports: [QaiIcon] })],
   argTypes: {
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },
     size: { options: QaiButtonSizes, control: { type: 'radio' } },
     startIcon: { options: QaiIconKinds, control: { type: 'select' } },
     endIcon: { options: QaiIconKinds, control: { type: 'select' } },
   },
-  decorators: [moduleMetadata({ imports: [QaiIcon] })],
   parameters: {
     design: {
       type: 'figma',

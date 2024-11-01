@@ -11,6 +11,7 @@ type QaiBadgeStory = QaiBadge & {
 const meta: Meta<QaiBadgeStory> = {
   component: QaiBadge,
   tags: ['autodocs'],
+  decorators: [moduleMetadata({ imports: [QaiIcon] })],
   argTypes: {
     kind: { options: QaiBadgeKinds, control: { type: 'radio' } },
     shape: { options: QaiBadgeShapes, control: { type: 'radio' } },
@@ -20,7 +21,6 @@ const meta: Meta<QaiBadgeStory> = {
   args: {
     shape: 'rectangle',
   },
-  decorators: [moduleMetadata({ imports: [QaiIcon] })],
   parameters: {
     design: {
       type: 'figma',

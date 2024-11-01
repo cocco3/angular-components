@@ -10,6 +10,7 @@
   min-height: 28px;
   padding-block: 2px;
   padding-inline: 8px;
+  white-space: nowrap;
 }
 
 :host .text {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { ScoreSquare, ScoreSquareKinds } from './score-square';
 
 const meta: Meta<ScoreSquare> = {
-  title: 'Assignments/score-square',
+  title: 'assignments/score-square',
   component: ScoreSquare,
   tags: ['autodocs'],
   argTypes: {
