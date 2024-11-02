@@ -21,8 +21,8 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "src/css/theme.css",
-              "src/css/typography.css"
+              "src/styles/theme.css",
+              "src/styles/typography.css"
             ],
             "scripts": []
           },
@@ -76,8 +76,8 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "src/css/theme.css",
-              "src/css/typography.css"
+              "src/styles/theme.css",
+              "src/styles/typography.css"
             ],
             "scripts": []
           }

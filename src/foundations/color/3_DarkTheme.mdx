@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/blocks';
-import { darkThemeColorsArray } from './colorData'
+import { darkTheme } from './theme'
 
 <Meta title="foundations/Dark Theme" />
 
@@ -10,12 +10,14 @@ provide context and convey information, such as status, state, or action.
 
 You can also opt into it by adding the `theme-dark` class to any container.
 
+All variables are sourced from the [Figma colors file](https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=6472-97620&node-type=frame&t=HjkBV1AN9gHTnK44-0).
+
 <div>
-  {darkThemeColorsArray.map(item => (
+  {Object.values(darkTheme).map(item => (
     <>
       <h2>{item.name}</h2>
       <div class="docs-colorSet sb-unstyled theme-light">
-        {Object.entries(item.colors).map(([weight, hex]) => {
+        {Object.entries(item.values).map(([weight, hex]) => {
           const variable = `${item.id}-${weight}`
           return (
             <div class="docs-colorItem" key={variable}>

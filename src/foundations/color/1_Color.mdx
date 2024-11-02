@@ -1,6 +1,5 @@
 import { Meta } from '@storybook/blocks';
 import { primitives } from './primitive'
-import { primitiveColorsArray } from './colorData'
 
 <Meta title="foundations/Color Primitives" />
 
@@ -9,12 +8,14 @@ import { primitiveColorsArray } from './colorData'
 Foundational colors to be used by different themes. These colors are not
 context-specific, and should not be used directly in components.
 
+All colors are sourced from the [Figma colors file](https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=5225-371288&node-type=frame&t=HjkBV1AN9gHTnK44-0).
+
 <div>
-  {primitiveColorsArray.map(item => (
+  {Object.values(primitives).map(item => (
     <>
       <h2>{item.name}</h2>
       <div class="docs-colorSwatch sb-unstyled theme-light">
-        {Object.entries(item.colors).map(([weight, hex]) => {
+        {Object.entries(item.values).map(([weight, hex]) => {
           const variable = `${item.id}-${weight}`
           return (
             <div class="docs-colorItem" key={variable}>
