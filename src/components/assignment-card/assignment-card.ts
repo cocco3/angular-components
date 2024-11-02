@@ -40,9 +40,8 @@ type Badges = {
 export class AssignmentCard {
   @Input({ required: true }) title!: string;
   @Input() badges?: Badges[] = [];
-  buttonTitle: string;
 
-  constructor() {
-    this.buttonTitle = `View assignment for ${this.title}`;
+  protected get buttonTitle() {
+    return `View assignment for ${this.title}`;
   }
 }
