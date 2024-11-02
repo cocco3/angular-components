@@ -53,13 +53,16 @@ export const lightTheme = {
     },
   },
   shadow: {
-    name: 'Shadow',
-    id: 'shadow',
+    name: 'Shadow' as const,
+    id: 'shadow' as const,
     values: {
       xs: `0px 1px 2px 0px rgb(from ${gray[900]} r g b / 0.05)`,
       small: `
-      0px 1px 2px 0px rgb(from ${gray[900]} r g b / 0.06),
-      0px 1px 3px 0px rgb(from ${gray[900]} r g b / 0.10)`,
+        0px 1px 2px 0px rgb(from ${gray[900]} r g b / 0.06),
+        0px 1px 3px 0px rgb(from ${gray[900]} r g b / 0.10)`,
+      medium: `
+        0px 2px 4px -2px rgb(from ${gray[900]} r g b / 0.06),
+        0px 4px 8px -2px rgb(from ${gray[900]} r g b / 0.10)`,
     },
   },
 };
@@ -113,6 +116,9 @@ export const darkTheme: Theme = {
       small: `
         0px 1px 2px 0px rgb(from ${gray[100]} r g b / 0.94),
         0px 1px 3px 0px rgb(from ${gray[100]} r g b / 0.9)`,
+      medium: `
+        0px 2px 4px -2px rgb(from ${gray[100]} r g b / 0.94),
+        0px 4px 8px -2px rgb(from ${gray[100]} r g b / 0.9)`,
     },
   },
 };
