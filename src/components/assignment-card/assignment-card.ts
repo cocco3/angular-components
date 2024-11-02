@@ -40,9 +40,9 @@ type Badges = {
 export class AssignmentCard {
   @Input({ required: true }) title!: string;
   @Input() badges?: Badges[] = [];
+  buttonTitle: string;
 
-  @HostBinding('buttonTitle')
-  get buttonTitle() {
-    return `View assignment for ${this.title}`;
+  constructor() {
+    this.buttonTitle = `View assignment for ${this.title}`;
   }
 }
