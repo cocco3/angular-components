@@ -18,21 +18,16 @@ const meta: Meta<AssignmentCard> = {
   },
 
   // custom render to allow content projection
-  render: (args) => ({
-    props: args,
-    template: `
-      <assignment-card ${argsToAttributes(args)}>
-        <div badges>
-          <qai-badge shape="rectangle" kind="red" label="Past due">
-            <qai-icon kind="alert-triangle" positionStart />
-          </qai-badge>
-        </div>
-        <div action>
-          <button qai-button kind="primary" size="medium">View Assignment</button>
-        </div>
-      </assignment-card>
-    `,
-  }),
+  // render: (args) => ({
+  //   props: args,
+  //   template: `
+  //     <assignment-card ${argsToAttributes(args)}>
+  //       <div action>
+  //         <button qai-button kind="primary" size="medium">View Assignment</button>
+  //       </div>
+  //     </assignment-card>
+  //   `,
+  // }),
 };
 
 export default meta;
@@ -40,5 +35,11 @@ export default meta;
 type Story = StoryObj<AssignmentCard>;
 
 export const Default: Story = {
-  args: { title: 'Objection Handling Q3 2024' },
+  args: {
+    title: 'Objection Handling Q3 2024',
+    badges: [
+      { kind: 'red', label: 'Past due', icon: 'alert-triangle' },
+      { kind: 'gray', label: 'Incomplete' },
+    ],
+  },
 };
