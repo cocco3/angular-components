@@ -14,10 +14,12 @@ export const lightThemeColorsArray = [
   { name: 'Text', id: 'text', colors: lightTheme.text },
   { name: 'Background', id: 'bg', colors: lightTheme.background },
   { name: 'Border', id: 'border', colors: lightTheme.border },
+  { name: 'Shadow', id: 'shadow', colors: lightTheme.shadow },
 ];
 
 export const darkThemeColorsArray = [
   { name: 'Text', id: 'text', colors: darkTheme.text },
   { name: 'Background', id: 'bg', colors: darkTheme.background },
   { name: 'Border', id: 'border', colors: darkTheme.border },
+  { name: 'Shadow', id: 'shadow', colors: darkTheme.shadow },
 ];

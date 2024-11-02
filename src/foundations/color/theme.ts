@@ -33,6 +33,12 @@ export const lightTheme = {
     warning: yellow['300'],
     success: green['300'],
   },
+  shadow: {
+    xs: `0px 1px 2px 0px rgb(from ${gray[900]} r g b / 0.05)`,
+    small: `
+      0px 1px 2px 0px rgb(from ${gray[900]} r g b / 0.06),
+      0px 1px 3px 0px rgb(from ${gray[900]} r g b / 0.10)`,
+  },
 };
 
 export const darkTheme: Theme = {
@@ -63,5 +69,11 @@ export const darkTheme: Theme = {
     error: red['400'],
     warning: yellow['400'],
     success: green['400'],
+  },
+  shadow: {
+    xs: `0px 1px 2px 0px rgb(from ${gray[100]} r g b / 0.95)`,
+    small: `
+      0px 1px 2px 0px rgb(from ${gray[100]} r g b / 0.94),
+      0px 1px 3px 0px rgb(from ${gray[100]} r g b / 0.9)`,
   },
 };
