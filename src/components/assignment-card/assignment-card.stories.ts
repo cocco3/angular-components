@@ -9,6 +9,11 @@ const meta: Meta<AssignmentCard> = {
   title: 'assignments/assignment-card',
   component: AssignmentCard,
   tags: ['autodocs'],
+  argTypes: {
+    buttonTitle: {
+      table: { disable: true },
+    },
+  },
   parameters: {
     design: {
       type: 'figma',

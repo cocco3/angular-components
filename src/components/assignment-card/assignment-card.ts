@@ -41,7 +41,7 @@ export class AssignmentCard {
   @Input({ required: true }) title!: string;
   @Input() badges?: Badges[] = [];
 
-  protected get buttonTitle() {
+  get buttonTitle() {
     return `View assignment for ${this.title}`;
   }
 }
