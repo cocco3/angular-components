@@ -28,6 +28,7 @@ type Story = StoryObj<AssignmentCard>;
 
 export const Default: Story = {
   args: {
+    assignmentUrl: '/',
     title: 'Objection Handling Q3 2024',
     badges: [
       { kind: 'red', label: 'Past due', icon: 'alert-triangle' },

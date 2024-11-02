@@ -1,8 +1,8 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { QaiIcon, QaiIconKind } from '../qai-icon';
 import { QaiBadge, type QaiBadgeKind } from '../qai-badge';
-import { QaiButton } from '../qai-button';
+import { QaiButtonAnchor } from '../qai-button';
 
 type Badges = {
   icon?: QaiIconKind | undefined;
@@ -12,7 +12,7 @@ type Badges = {
 
 @Component({
   exportAs: 'assignmentCard',
-  imports: [CommonModule, QaiBadge, QaiButton, QaiIcon],
+  imports: [CommonModule, QaiBadge, QaiButtonAnchor, QaiIcon],
   selector: 'assignment-card',
   standalone: true,
   styleUrls: ['./assignment-card.css'],
@@ -26,20 +26,22 @@ type Badges = {
     </div>
     <div class="text">{{ title }}</div>
     <div class="action">
-      <button
+      <a
         qai-button
+        [href]="assignmentUrl"
         size="medium"
         kind="primary"
         [attr.aria-label]="buttonTitle"
       >
         View assignment
-      </button>
+      </a>
     </div>
   `,
 })
 export class AssignmentCard {
   @Input({ required: true }) title!: string;
   @Input() badges?: Badges[] = [];
+  @Input({ required: true }) assignmentUrl!: string;
 
   get buttonTitle() {
     return `View assignment for ${this.title}`;
