@@ -8,6 +8,7 @@
   font: 400 var(--type-text-md);
   padding-block: 8px;
   padding-inline: 12px;
+  width: 100%;
 }
 
 :host::-moz-focus-inner {
