@@ -9,6 +9,10 @@ import { booleanAttribute, Component, Input } from '@angular/core';
  */
 @Component({
   exportAs: 'qaiInput',
+  host: {
+    '[disabled]': 'disabled',
+    '[readonly]': 'readonly',
+  },
   selector: `input[qai-input]`,
   standalone: true,
   styleUrls: ['./qai-input.css'],
