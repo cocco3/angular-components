@@ -17,8 +17,8 @@ const meta: Meta<QaiSelect> = {
     props: args,
     template: `
       <select qai-select ${argsToAttributes(args)}>
-        <option>One</option>
-        <option>Two</option>
+        <option value="one">One</option>
+        <option selected>Two</option>
       </select>
     `,
   }),
@@ -28,10 +28,8 @@ export default meta;
 
 type Story = StoryObj<QaiSelect>;
 
-export const Default: Story = {
-  args: { value: 'Hello world' },
-};
+export const Default: Story = {};
 
 export const Disabled: Story = {
-  args: { value: 'Hello world', disabled: true },
+  args: { disabled: true },
 };

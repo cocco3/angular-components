@@ -15,6 +15,5 @@ import { booleanAttribute, Component, Input } from '@angular/core';
   template: '<ng-content />',
 })
 export class QaiSelect {
-  @Input({ required: true }) value!: string;
   @Input({ transform: booleanAttribute }) disabled? = false;
 }
