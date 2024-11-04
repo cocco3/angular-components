@@ -230,25 +230,32 @@
 
 
       <div style="display: grid;  gap: 8px;">
-        <h1 ui-heading size="large">Large H1</h1>
-        <h2 ui-heading size="medium">Medium H2</h2>
-        <h3 ui-heading size="small">Small H3</h3>
+        <h1 qai-heading size="large">Large H1</h1>
+        <h2 qai-heading size="medium">Medium H2</h2>
+        <h3 qai-heading size="small">Small H3</h3>
       </div>
 
 
       <div style="display: flex; align-items: center; gap: 8px;">
-        <button ui-button kind="primary" size="medium">
-          <em class="material-icons">shopping_cart</em>
+        <button qai-button kind="primary" size="medium">
+          <qai-icon kind="alert-circle" positionStart />
           Primary
         </button>
 
-        <button ui-button kind="secondary" size="small">Secondary</button>
+        <button qai-button kind="secondary" size="small">Secondary</button>
 
-        <a ui-button kind="secondary" size="small" href="/" target="_blank" disabled
+        <a qai-button kind="secondary" size="small" href="/" target="_blank" disabled
           >Link</a
         >
 
-        <button ui-button kind="secondary" size="small" disabled>Disabled</button>
+        <button qai-button kind="secondary" size="small" disabled>Disabled</button>
+      </div>
+
+
+      <div>
+        <input qai-input value="" placeholder="placeholder" />
+        <input qai-input value="value" />
+        <input qai-input value="disabled" disabled />
       </div>
 
 

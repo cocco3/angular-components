@@ -1,0 +1,33 @@
+:host {
+  background-color: var(--bg-primary);
+  border-color: var(--border-primary);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font: 400 var(--type-text-md);
+  padding-block: 8px;
+  padding-inline: 12px;
+}
+
+:host::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:host::placeholder {
+  color: var(--text-placeholder);
+}
+
+:host:read-only {
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled);
+  color: var(--text-disabled);
+}
+
+:host:disabled {
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled);
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
