@@ -26,17 +26,22 @@ export default meta;
 type Story = StoryObj<QaiCheckbox>;
 
 export const Default: Story = {
-  args: { value: 'Hello world' },
+  args: { value: 'Hello world', name: 'default' },
 };
 
 export const Checked: Story = {
-  args: { value: 'Hello world', checked: true },
+  args: { value: 'Hello world', checked: true, name: 'checked' },
 };
 
 export const Disabled: Story = {
-  args: { value: 'Hello world', disabled: true },
+  args: { value: 'Hello world', disabled: true, name: 'disabled' },
 };
 
 export const CheckedDisabled: Story = {
-  args: { value: 'Hello world', checked: true, disabled: true },
+  args: {
+    value: 'Hello world',
+    checked: true,
+    disabled: true,
+    name: 'checkedDisabled',
+  },
 };
