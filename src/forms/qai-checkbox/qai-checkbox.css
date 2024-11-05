@@ -15,7 +15,7 @@
 }
 
 :host:checked:not(:disabled) {
-  background-color: #3796a4;
+  background-color: var(--fg-brand);
 }
 
 :host:checked::after {
