@@ -1,0 +1,42 @@
+:host {
+  appearance: none;
+  background-color: var(--bg-primary);
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 20px;
+  margin: 0;
+  width: 20px;
+}
+
+:host:not(:checked) {
+  border-color: var(--border-primary);
+  border-style: solid;
+  border-width: 1px;
+}
+
+:host:checked {
+  background-color: #3796a4;
+}
+
+:host:checked::after {
+  background-color: #ffffff;
+  content: '';
+  display: block;
+  height: 14px;
+  margin-block: 3px;
+  margin-inline: 3px;
+  mask-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19.293%205.293%209%2015.586l-4.293-4.293a1%201%200%200%200-1.414%200%201%201%200%200%200%200%201.414l5%205a1%201%200%200%200%201.414%200l11-11a1%201%200%200%200%200-1.414%201%201%200%200%200-1.414%200%22%2F%3E%3C%2Fsvg%3E");
+  width: 14px;
+}
+
+:host:disabled:not(:checked) {
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled);
+  cursor: not-allowed;
+}
+
+:host:disabled:checked {
+  background-color: var(--border-disabled);
+  border-color: var(--border-disabled);
+  cursor: not-allowed;
+}

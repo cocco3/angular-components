@@ -7,7 +7,7 @@ import {
   QaiHeading,
   QaiIcon,
 } from '../components';
-import { QaiInput } from '../forms/qai-input';
+import { QaiCheckbox, QaiInput, QaiSelect } from '../forms/';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,9 @@ import { QaiInput } from '../forms/qai-input';
     QaiHeading,
     QaiIcon,
     QaiBadge,
+    QaiCheckbox,
     QaiInput,
+    QaiSelect,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -4,6 +4,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 8px;
+  box-sizing: border-box;
   color: var(--text-primary);
   font: 400 var(--type-text-md);
   height: 40px;
