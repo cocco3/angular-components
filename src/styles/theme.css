@@ -35,6 +35,7 @@
   --border-secondary: #eaecf0;
   --border-tertiary: #f2f4f7;
   --border-disabled: #d0d5dd;
+  --border-brand: #87c0c8;
   --border-error: #fda29b;
   --border-warning: #fec84b;
   --border-success: #9ae6bb;
@@ -80,6 +81,7 @@
   --border-secondary: #182230;
   --border-tertiary: #182230;
   --border-disabled: #344054;
+  --border-brand: #6cb2bc;
   --border-error: #f97066;
   --border-warning: #fdb022;
   --border-success: #84e2ae;
