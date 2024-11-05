@@ -29,6 +29,14 @@ export const Default: Story = {
   args: { value: 'Hello world' },
 };
 
+export const Checked: Story = {
+  args: { value: 'Hello world', checked: true },
+};
+
 export const Disabled: Story = {
   args: { value: 'Hello world', disabled: true },
+};
+
+export const CheckedDisabled: Story = {
+  args: { value: 'Hello world', checked: true, disabled: true },
 };

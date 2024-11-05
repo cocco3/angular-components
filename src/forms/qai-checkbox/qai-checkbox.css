@@ -1,6 +1,5 @@
 :host {
   appearance: none;
-  background-color: var(--bg-primary);
   border-radius: 6px;
   box-sizing: border-box;
   height: 20px;
@@ -8,13 +7,14 @@
   width: 20px;
 }
 
-:host:not(:checked) {
+:host:not(:checked):not(:disabled) {
+  background-color: var(--bg-primary);
   border-color: var(--border-primary);
   border-style: solid;
   border-width: 1px;
 }
 
-:host:checked {
+:host:checked:not(:disabled) {
   background-color: #3796a4;
 }
 
