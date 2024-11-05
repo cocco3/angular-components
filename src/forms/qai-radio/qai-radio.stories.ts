@@ -8,7 +8,7 @@ const meta: Meta<QaiRadio> = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=1090-57817&node-type=frame&t=MLkgc0CS2RhZNW99-0',
+      url: 'https://www.figma.com/design/tLul5JhVTYQ3evZpMEpKEm/Quail?node-id=1097-63652&node-type=frame&t=poPFcNNJgIELb63g-0',
     },
   },
 
