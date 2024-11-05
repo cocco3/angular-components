@@ -9,6 +9,7 @@
   --text-tertiary: #475467;
   --text-disabled: #667085;
   --text-placeholder: #667085;
+  --text-brand: #016f83;
   --text-error: #d92d20;
   --text-warning: #dc6803;
   --text-success: #59da94;
@@ -55,6 +56,7 @@
   --text-tertiary: #98a2b3;
   --text-disabled: #667085;
   --text-placeholder: #98a2b3;
+  --text-brand: #6cb2bc;
   --text-error: #f97066;
   --text-warning: #fdb022;
   --text-success: #84e2ae;
