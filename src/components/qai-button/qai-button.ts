@@ -37,6 +37,7 @@ class QaiButtonBase {
   exportAs: 'qaiButton',
   host: {
     '[disabled]': 'disabled',
+    type: 'button',
   },
   selector: 'button[qai-button]',
   standalone: true,

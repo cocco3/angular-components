@@ -17,7 +17,7 @@ const meta: Meta<QaiSelect> = {
     props: args,
     template: `
       <select qai-select ${argsToAttributes(args)}>
-        <option value="one">One</option>
+        <option>One</option>
         <option selected>Two</option>
       </select>
     `,

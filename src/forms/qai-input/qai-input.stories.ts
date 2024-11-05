@@ -1,10 +1,16 @@
 import { type Meta, type StoryObj } from '@storybook/angular';
-import { QaiInput } from './qai-input';
+import { QaiInput, QaiInputTypes } from './qai-input';
 import { argsToAttributes } from '../../../.storybook/utilities';
 
 const meta: Meta<QaiInput> = {
   component: QaiInput,
   tags: ['autodocs'],
+  argTypes: {
+    type: { options: QaiInputTypes, control: { type: 'radio' } },
+  },
+  args: {
+    type: 'text',
+  },
   parameters: {
     design: {
       type: 'figma',

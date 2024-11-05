@@ -6,6 +6,7 @@
   border-radius: 8px;
   color: var(--text-primary);
   font: 400 var(--type-text-md);
+  height: 40px;
   padding-block: 8px;
   padding-inline: 12px;
   width: 100%;
