@@ -1,21 +1,19 @@
 :host {
   appearance: none;
+  background-color: var(--bg-primary);
+  border-color: var(--border-primary);
   border-radius: 999px;
+  border-style: solid;
+  border-width: 1px;
   box-sizing: border-box;
   height: 20px;
   margin: 0;
   width: 20px;
 }
 
-:host:not(:checked):not(:disabled) {
-  background-color: var(--bg-primary);
-  border-color: var(--border-primary);
-  border-style: solid;
-  border-width: 1px;
-}
-
-:host:checked:not(:disabled) {
+:host:checked {
   background-color: var(--fg-brand);
+  border-color: transparent;
 }
 
 :host:checked::after {
@@ -24,19 +22,17 @@
   content: '';
   display: block;
   height: 8px;
-  margin-block: 6px;
-  margin-inline: 6px;
+  margin-block: 5px;
+  margin-inline: 5px;
   width: 8px;
 }
 
-:host:disabled:not(:checked) {
-  background-color: var(--bg-disabled);
+:host:disabled {
+  background-color: var(--bg-disabled);;
   border-color: var(--border-disabled);
   cursor: not-allowed;
 }
 
-:host:disabled:checked {
+:host:disabled:checked::after {
   background-color: var(--border-disabled);
-  border-color: var(--border-disabled);
-  cursor: not-allowed;
 }
