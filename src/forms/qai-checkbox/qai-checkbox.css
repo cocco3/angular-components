@@ -19,7 +19,7 @@
 }
 
 :host:checked::after {
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
   content: '';
   display: block;
   height: 14px;
