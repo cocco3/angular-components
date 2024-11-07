@@ -9,18 +9,9 @@ import { booleanAttribute, Component, Input } from '@angular/core';
  */
 @Component({
   exportAs: 'qaiTextarea',
-  host: {
-    '[disabled]': 'disabled',
-    '[attr.id]': 'id',
-    '[attr.name]': 'name',
-  },
   selector: 'textarea[qai-textarea]',
   standalone: true,
   styleUrls: ['./qai-textarea.css'],
   template: '',
 })
-export class QaiTextarea {
-  @Input({ transform: booleanAttribute }) disabled? = false;
-  @Input() id?: string;
-  @Input() name?: string;
-}
+export class QaiTextarea {}

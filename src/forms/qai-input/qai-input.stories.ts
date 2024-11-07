@@ -2,11 +2,22 @@ import { type Meta, type StoryObj } from '@storybook/angular';
 import { QaiInput, QaiInputTypes } from './qai-input';
 import { argsToAttributes } from '../../../.storybook/utilities';
 
-const meta: Meta<QaiInput> = {
+type QaiInputStory = QaiInput & {
+  disabled?: boolean;
+  readonly?: boolean;
+  name?: string;
+  value?: string;
+};
+
+const meta: Meta<QaiInputStory> = {
   component: QaiInput,
   tags: ['autodocs'],
   argTypes: {
     type: { options: QaiInputTypes, control: { type: 'radio' } },
+    disabled: { control: { type: 'boolean' } },
+    readonly: { control: { type: 'boolean' } },
+    name: { control: { type: 'text' } },
+    value: { control: { type: 'text' } },
   },
   args: {
     type: 'text',
@@ -29,7 +40,7 @@ const meta: Meta<QaiInput> = {
 
 export default meta;
 
-type Story = StoryObj<QaiInput>;
+type Story = StoryObj<QaiInputStory>;
 
 export const Default: Story = {
   args: { value: 'Hello world' },
@@ -37,4 +48,8 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   args: { value: 'Hello world', disabled: true },
+};
+
+export const Readonly: Story = {
+  args: { value: 'Hello world', readonly: true },
 };

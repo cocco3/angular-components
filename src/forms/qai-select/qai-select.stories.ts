@@ -2,9 +2,20 @@ import { type Meta, type StoryObj } from '@storybook/angular';
 import { QaiSelect } from './qai-select';
 import { argsToAttributes } from '../../../.storybook/utilities';
 
-const meta: Meta<QaiSelect> = {
+type QaiSelectStory = QaiSelect & {
+  disabled?: boolean;
+  name?: string;
+  value?: string;
+};
+
+const meta: Meta<QaiSelectStory> = {
   component: QaiSelect,
   tags: ['autodocs'],
+  argTypes: {
+    disabled: { control: { type: 'boolean' } },
+    name: { control: { type: 'text' } },
+    value: { control: { type: 'text' } },
+  },
   parameters: {
     design: {
       type: 'figma',
@@ -26,7 +37,7 @@ const meta: Meta<QaiSelect> = {
 
 export default meta;
 
-type Story = StoryObj<QaiSelect>;
+type Story = StoryObj<QaiSelectStory>;
 
 export const Default: Story = {};
 

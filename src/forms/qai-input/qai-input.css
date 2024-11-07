@@ -34,3 +34,7 @@
   color: var(--text-disabled);
   cursor: not-allowed;
 }
+
+:host-context(.theme-dark) :host::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+}

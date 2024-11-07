@@ -13,12 +13,7 @@ export type QaiInputType = (typeof QaiInputTypes)[number];
 @Component({
   exportAs: 'qaiInput',
   host: {
-    '[disabled]': 'disabled',
-    '[readonly]': 'readonly',
     '[type]': 'type',
-    '[attr.id]': 'id',
-    '[attr.name]': 'name',
-    '[attr.value]': 'value',
   },
   selector: 'input[qai-input]',
   standalone: true,
@@ -26,10 +21,5 @@ export type QaiInputType = (typeof QaiInputTypes)[number];
   template: '',
 })
 export class QaiInput {
-  @Input({ transform: booleanAttribute }) disabled? = false;
-  @Input() id?: string;
-  @Input() name?: string;
-  @Input({ transform: booleanAttribute }) readonly? = false;
   @Input() type?: QaiInputType = 'text';
-  @Input({ required: true }) value!: string;
 }
