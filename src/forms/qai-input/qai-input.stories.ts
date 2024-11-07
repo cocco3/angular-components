@@ -14,10 +14,7 @@ const meta: Meta<QaiInputStory> = {
   component: QaiInput,
   tags: ['autodocs'],
   argTypes: {
-    type: {
-      options: ['text', 'password', 'email', 'date'],
-      control: { type: 'radio' },
-    },
+    type: { options: QaiInputTypes, control: { type: 'radio' } },
     disabled: { control: { type: 'boolean' } },
     readonly: { control: { type: 'boolean' } },
     name: { control: { type: 'text' } },
@@ -67,5 +64,5 @@ export const Email: Story = {
 };
 
 export const Date: Story = {
-  args: { type: 'date' },
+  args: { value: '2025-01-19', type: 'date' },
 };
