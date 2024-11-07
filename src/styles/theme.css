@@ -23,7 +23,9 @@
   --border-error: #fda29b;
   --border-error-solid: #d92d20;
   --border-warning: #fec84b;
+  --border-warning-solid: #dc6803;
   --border-success: #9ae6bb;
+  --border-success-solid: #59da94;
 
   --fg-primary: #101828;
   --fg-secondary: #344054;
@@ -72,7 +74,9 @@
   --border-error: #f97066;
   --border-error-solid: #f04438;
   --border-warning: #fdb022;
+  --border-warning-solid: #f79009;
   --border-success: #84e2ae;
+  --border-success-solid: #6edea1;
 
   --fg-primary: #ffffff;
   --fg-secondary: #d0d5dd;

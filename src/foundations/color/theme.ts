@@ -40,7 +40,9 @@ export const lightTheme = {
       error: red['300'],
       'error-solid': red['600'],
       warning: yellow['300'],
+      'warning-solid': yellow['600'],
       success: green['300'],
+      'success-solid': green['600'],
     },
   },
   foreground: {
@@ -115,7 +117,9 @@ export const darkTheme: Theme = {
       error: red['400'],
       'error-solid': red['500'],
       warning: yellow['400'],
+      'warning-solid': yellow['500'],
       success: green['400'],
+      'success-solid': green['500'],
     },
   },
   foreground: {
