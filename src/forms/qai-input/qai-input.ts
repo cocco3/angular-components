@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 export const QaiInputTypes = ['text', 'password', 'email', 'date'];
 export type QaiInputType = (typeof QaiInputTypes)[number];
@@ -12,14 +12,9 @@ export type QaiInputType = (typeof QaiInputTypes)[number];
  */
 @Component({
   exportAs: 'qaiInput',
-  host: {
-    '[type]': 'type',
-  },
-  selector: 'input[qai-input]',
+  selector: `input[qai-input]`,
   standalone: true,
   styleUrls: ['./qai-input.css'],
   template: '',
 })
-export class QaiInput {
-  @Input() type?: QaiInputType = 'text';
-}
+export class QaiInput {}

@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Use this component by adding the `[qai-textarea]` attribute
@@ -12,6 +12,6 @@ import { booleanAttribute, Component, Input } from '@angular/core';
   selector: 'textarea[qai-textarea]',
   standalone: true,
   styleUrls: ['./qai-textarea.css'],
-  template: '',
+  template: '<ng-content />',
 })
 export class QaiTextarea {}

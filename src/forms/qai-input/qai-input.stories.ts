@@ -6,6 +6,7 @@ type QaiInputStory = QaiInput & {
   disabled?: boolean;
   readonly?: boolean;
   name?: string;
+  type?: string;
   value?: string;
 };
 
@@ -13,7 +14,10 @@ const meta: Meta<QaiInputStory> = {
   component: QaiInput,
   tags: ['autodocs'],
   argTypes: {
-    type: { options: QaiInputTypes, control: { type: 'radio' } },
+    type: {
+      options: ['text', 'password', 'email', 'date'],
+      control: { type: 'radio' },
+    },
     disabled: { control: { type: 'boolean' } },
     readonly: { control: { type: 'boolean' } },
     name: { control: { type: 'text' } },
@@ -52,4 +56,16 @@ export const Disabled: Story = {
 
 export const Readonly: Story = {
   args: { value: 'Hello world', readonly: true },
+};
+
+export const Password: Story = {
+  args: { value: 'Hello world', type: 'password' },
+};
+
+export const Email: Story = {
+  args: { value: 'hello@world.com', type: 'email' },
+};
+
+export const Date: Story = {
+  args: { type: 'date' },
 };
