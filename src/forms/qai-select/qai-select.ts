@@ -11,8 +11,8 @@ import { booleanAttribute, Component, Input } from '@angular/core';
   exportAs: 'qaiSelect',
   host: {
     '[disabled]': 'disabled',
-    '[id]': 'id',
-    '[name]': 'name',
+    '[attr.id]': 'id',
+    '[attr.name]': 'name',
   },
   selector: `select[qai-select]`,
   standalone: true,

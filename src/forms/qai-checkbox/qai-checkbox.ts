@@ -10,12 +10,12 @@ import { booleanAttribute, Component, Input } from '@angular/core';
 @Component({
   exportAs: 'qaiCheckbox',
   host: {
+    type: 'checkbox',
     '[checked]': 'checked',
     '[disabled]': 'disabled',
-    '[id]': 'id',
-    '[name]': 'name',
-    type: 'checkbox',
-    '[value]': 'value',
+    '[attr.id]': 'id',
+    '[attr.name]': 'name',
+    '[attr.value]': 'value',
   },
   selector: `input[qai-checkbox][type="checkbox"]`,
   standalone: true,

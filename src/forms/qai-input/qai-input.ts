@@ -13,12 +13,12 @@ export type QaiInputType = (typeof QaiInputTypes)[number];
 @Component({
   exportAs: 'qaiInput',
   host: {
-    '[id]': 'id',
-    '[name]': 'name',
     '[disabled]': 'disabled',
     '[readonly]': 'readonly',
     '[type]': 'type',
-    '[value]': 'value',
+    '[attr.id]': 'id',
+    '[attr.name]': 'name',
+    '[attr.value]': 'value',
   },
   selector: 'input[qai-input]',
   standalone: true,
