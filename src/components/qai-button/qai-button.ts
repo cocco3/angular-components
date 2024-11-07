@@ -36,7 +36,6 @@ class QaiButtonBase {
 @Component({
   exportAs: 'qaiButton',
   host: {
-    '[disabled]': 'disabled',
     type: 'button',
   },
   selector: 'button[qai-button]',
@@ -44,12 +43,17 @@ class QaiButtonBase {
   styleUrls: ['./qai-button.css'],
   templateUrl: './qai-button.html',
 })
-export class QaiButton extends QaiButtonBase {
-  @Input({ transform: booleanAttribute }) disabled? = false;
-}
+export class QaiButton extends QaiButtonBase {}
 
+/**
+ * Use this component by adding the `[qai-button]` attribute
+ *  on any anchor element.
+ *
+ * Using an attribute instead of a custom element allows direct access
+ *  to the native underlying element.
+ */
 @Component({
-  exportAs: 'uiButtonAnchor',
+  exportAs: 'qaiButtonAnchor',
   selector: 'a[qai-button]',
   standalone: true,
   styleUrls: ['./qai-button.css'],

@@ -5,6 +5,7 @@ import { QaiIcon, QaiIconKinds, type QaiIconKind } from '../qai-icon';
 
 type QaiButtonStory = QaiButton & {
   content: string;
+  disabled?: boolean;
   startIcon?: QaiIconKind;
   endIcon?: QaiIconKind;
 };
@@ -14,6 +15,7 @@ const meta: Meta<QaiButtonStory> = {
   tags: ['autodocs'],
   decorators: [moduleMetadata({ imports: [QaiIcon] })],
   argTypes: {
+    disabled: { control: { type: 'boolean' } },
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },
     size: { options: QaiButtonSizes, control: { type: 'radio' } },
     startIcon: { options: QaiIconKinds, control: { type: 'select' } },
