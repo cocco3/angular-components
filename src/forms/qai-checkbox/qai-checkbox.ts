@@ -9,23 +9,9 @@ import { booleanAttribute, Component, Input } from '@angular/core';
  */
 @Component({
   exportAs: 'qaiCheckbox',
-  host: {
-    type: 'checkbox',
-    '[checked]': 'checked',
-    '[disabled]': 'disabled',
-    '[attr.id]': 'id',
-    '[attr.name]': 'name',
-    '[attr.value]': 'value',
-  },
   selector: `input[qai-checkbox][type="checkbox"]`,
   standalone: true,
   styleUrls: ['./qai-checkbox.css'],
   template: '',
 })
-export class QaiCheckbox {
-  @Input({ transform: booleanAttribute }) checked? = false;
-  @Input({ transform: booleanAttribute }) disabled? = false;
-  @Input() id?: string;
-  @Input() name?: string;
-  @Input({ required: true }) value!: string;
-}
+export class QaiCheckbox {}
