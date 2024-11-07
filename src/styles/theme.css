@@ -14,14 +14,16 @@
   --text-warning: #dc6803;
   --text-success: #59da94;
 
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-tertiary: #f2f4f7;
-  --bg-disabled: #f2f4f7;
-  --bg-brand: #d7eaec;
-  --bg-error: #fef3f2;
-  --bg-warning: #fffaeb;
-  --bg-success: #dcf3e2;
+  --border-primary: #d0d5dd;
+  --border-secondary: #eaecf0;
+  --border-tertiary: #f2f4f7;
+  --border-disabled: #d0d5dd;
+  --border-brand: #87c0c8;
+  --border-brand-solid: #3796a4;
+  --border-error: #fda29b;
+  --border-error-solid: #d92d20;
+  --border-warning: #fec84b;
+  --border-success: #9ae6bb;
 
   --fg-primary: #101828;
   --fg-secondary: #344054;
@@ -32,14 +34,14 @@
   --fg-warning: #dc6803;
   --fg-success: #59da94;
 
-  --border-primary: #d0d5dd;
-  --border-secondary: #eaecf0;
-  --border-tertiary: #f2f4f7;
-  --border-disabled: #d0d5dd;
-  --border-brand: #87c0c8;
-  --border-error: #fda29b;
-  --border-warning: #fec84b;
-  --border-success: #9ae6bb;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f2f4f7;
+  --bg-disabled: #f2f4f7;
+  --bg-brand: #d7eaec;
+  --bg-error: #fef3f2;
+  --bg-warning: #fffaeb;
+  --bg-success: #dcf3e2;
 
   --shadow-xs: 0px 1px 2px 0px rgb(from #101828 r g b / 0.05);
   --shadow-small: 
@@ -61,14 +63,16 @@
   --text-warning: #fdb022;
   --text-success: #84e2ae;
 
-  --bg-primary: #0c111d;
-  --bg-secondary: #101828;
-  --bg-tertiary: #182230;
-  --bg-disabled: #182230;
-  --bg-brand: #52a4b0;
-  --bg-error: #f04438;
-  --bg-warning: #f79009;
-  --bg-success: #6edea1;
+  --border-primary: #344054;
+  --border-secondary: #182230;
+  --border-tertiary: #182230;
+  --border-disabled: #344054;
+  --border-brand: #6cb2bc;
+  --border-brand-solid: #52a4b0;
+  --border-error: #f97066;
+  --border-error-solid: #f04438;
+  --border-warning: #fdb022;
+  --border-success: #84e2ae;
 
   --fg-primary: #ffffff;
   --fg-secondary: #d0d5dd;
@@ -79,14 +83,14 @@
   --fg-warning: #f79009;
   --fg-success: #6edea1;
 
-  --border-primary: #344054;
-  --border-secondary: #182230;
-  --border-tertiary: #182230;
-  --border-disabled: #344054;
-  --border-brand: #6cb2bc;
-  --border-error: #f97066;
-  --border-warning: #fdb022;
-  --border-success: #84e2ae;
+  --bg-primary: #0c111d;
+  --bg-secondary: #101828;
+  --bg-tertiary: #182230;
+  --bg-disabled: #182230;
+  --bg-brand: #52a4b0;
+  --bg-error: #f04438;
+  --bg-warning: #f79009;
+  --bg-success: #6edea1;
 
   --shadow-xs: 0px 1px 2px 0px rgb(from #f2f4f7 r g b / 0.95);
   --shadow-small: 
