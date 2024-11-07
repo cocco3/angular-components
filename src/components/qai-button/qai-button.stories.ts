@@ -1,6 +1,11 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { argsToAttributes } from '../../../.storybook/utilities';
-import { QaiButton, QaiButtonKinds, QaiButtonSizes } from './qai-button';
+import {
+  QaiButton,
+  QaiButtonAnchor,
+  QaiButtonKinds,
+  QaiButtonSizes,
+} from './qai-button';
 import { QaiIcon, QaiIconKinds, type QaiIconKind } from '../qai-icon';
 
 type QaiButtonStory = QaiButton & {
@@ -13,7 +18,7 @@ type QaiButtonStory = QaiButton & {
 const meta: Meta<QaiButtonStory> = {
   component: QaiButton,
   tags: ['autodocs'],
-  decorators: [moduleMetadata({ imports: [QaiIcon] })],
+  decorators: [moduleMetadata({ imports: [QaiIcon, QaiButtonAnchor] })],
   argTypes: {
     disabled: { control: { type: 'boolean' } },
     kind: { options: QaiButtonKinds, control: { type: 'radio' } },
@@ -79,6 +84,39 @@ export const EndIcon: Story = {
     kind: 'primary',
     size: 'medium',
     content: 'Next',
+    endIcon: 'arrow-right',
+  },
+};
+
+type AnchorStory = StoryObj<
+  QaiButtonStory & {
+    href: string;
+    target?: string;
+  }
+>;
+
+export const Anchor: AnchorStory = {
+  render: ({ content, startIcon, endIcon, ...args }) => ({
+    props: args,
+    template: `
+      <a qai-button ${argsToAttributes(args)}>
+        ${startIcon ? `<qai-icon kind="${startIcon}" positionStart />` : ''}
+        ${content}
+        ${endIcon ? `<qai-icon kind="${endIcon}" positionEnd />` : ''}
+      </a>
+    `,
+  }),
+  argTypes: {
+    disabled: { table: { disable: true } },
+    href: { control: { type: 'text' } },
+    target: { control: { type: 'text' } },
+  },
+  args: {
+    href: '/',
+    target: '_blank',
+    kind: 'primary',
+    size: 'medium',
+    content: 'Link',
     endIcon: 'arrow-right',
   },
 };
